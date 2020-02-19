@@ -1,4 +1,4 @@
-#Java oop defter notlarım
+# Java oop defter notlarım
 
 Java platform bağımsız bir dildir. Yani java işletim sistemlerine göre derlenmez. Yazılan codelar oncelikle **javac** derleyicisiyle derlendikten sonra C,C++
 tarzındaki diller gibi bizler Executable tarzında işlemcimizin hemen derleyebileceği bir tarzda dosya oluşturmaz. Oluşan dosya **.class** biçiminde bir dosyadır 
