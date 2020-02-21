@@ -8,7 +8,7 @@ tarafında anlaşılması için  **jvm (java virtual machine )**' ihtiyacımız 
 >Compiler(derleyici) :fast_forward: codeları yüksek seviyeli bir dilden daha düşük seviyeli bir dile düşürür **ör:**Compiler'lar bildiğimiz Google translate gibidir 
 direk olarak verilen şeyi anlaşılır bir hale gettirir.
 
->İnterpreter(yorumlayıcı) :fast_forward: yüksek seviyeli dillerde sıklıkla görülür compiler edilen code'lar bilgisayar dillerine dönüştürülemediği için yorumlayıcılar Bunları
+> İnterpreter(yorumlayıcı) :fast_forward: yüksek seviyeli dillerde sıklıkla görülür compiler edilen code'lar bilgisayar dillerine dönüştürülemediği için yorumlayıcılar Bunları
 işlemciler için anlaşılır bir hale gettirir **ör** İnterpreter'ler birer çevirmen gibi düşüne biliriz konuşulan diyalogları duygu ve düşünce bakımından da karşı tarafa 
 aktarım gösterirler
 
@@ -26,22 +26,25 @@ satırları çalıştırır.
 tarzında çalışırken **jvm** ilk 2 satırı yapar ve 3. satırımızı yanı **Execut** işlemini işlemcilere bırakır.
     
     graph TD;
+    
         Java code-derleme(javac)->Byte code;
         Byte code-a.class->JVM for Windows;
         Byte code-a.class->JVM for Linux;
         Byte code-a.class->JVM for Mac;
 
 C dilinde 
+
     *#define Adam = 3
     *Const int Adam = 3
     Diye iki farklı veri tipimiz bulunmaktadır. **#define** ön bellekte adam görülen her yere 3 yazılmasına sebeb olur bizim işlemcimiz Adam diye bir veriyi görmez.
     **Const int** te ise verilen Adam değişkenine başka bir değer atayamayız her zaman Adam 3 olarak kalackatır 
 
-Java dilinde 
+Java dilinde
+
     final; diye bir değişkenimiz var bu değişkenimiz ise **C** deki **define** ve **Const int** değerlerimizie benziyorlar **final** değişkenimiz önceden bir değer almaz
     ne zaman biz bir değer veririz o zaman o değeri alır ve kilitler 
 
-####Hafıza
+#### Hafıza
 
 |       |       |   
 |adam   |static |  Nesnenin yeri bellidir sabittir program başlar ve değişmez
@@ -53,7 +56,7 @@ Java dilinde
 |       |       |       verirler
 
 
->Refactoring: codun çalışması değiştirilmeden tekrardan inşa edilmesi
+> Refactoring: codun çalışması değiştirilmeden tekrardan inşa edilmesi
 
 Public static void main(string[] args)
     >Public JVM programı yorumlamaya başlarken main metodunu arar bu yüzden JVM in bulabilmesi için public veriyoruz.
@@ -64,14 +67,14 @@ Public static void main(string[] args)
 
 ##Nesneye dayalı programlamanın temelleri
 
-###1.**Abstraction-information hiding (soyutlama)**
-###2.**Encapsulation (kapsülleme)**
-###3.**inheritance (kalıtım-miraslama)**
-###4.**Polymorpism (çok biçimlilik)**
+### 1.**Abstraction-information hiding (soyutlama)**
+### 2.**Encapsulation (kapsülleme)**
+### 3.**inheritance (kalıtım-miraslama)**
+### 4.**Polymorpism (çok biçimlilik)**
 
-####1.Abstraction
->Ayrıntılardan uzaklaşma soyutlama 
-    >**ör** bir klavyeyi düşünelim üzerinde tuşlar bulunuyor basınca bişeyleri ekrana yazmamıza yardımcı olan bir aygıt 
+#### 1.Abstraction
+> Ayrıntılardan uzaklaşma soyutlama 
+    > **ör** bir klavyeyi düşünelim üzerinde tuşlar bulunuyor basınca bişeyleri ekrana yazmamıza yardımcı olan bir aygıt 
     fakat bunu devresel olarak düşündüğümüz zaman ne kadar karmaşık bir hal alacağını düşünebilirz her bir harfin her bir tuşun 
     aslında bir code'a takabul ettiğini düşünerek çalışmak gayet derecede zor olması lazım gelir. Bundan dolayı nesneye dayalı programlamada ne kadar 
     sade, insanların daha basit anlayıp kompleks yapılardan uzaklaştıra işlemidir. 
