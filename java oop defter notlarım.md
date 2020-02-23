@@ -47,13 +47,18 @@ Java dilinde
 #### Hafıza
 
 |       |       |   
-|adam   |static |  Nesnenin yeri bellidir sabittir program başlar ve değişmez
+|adam   |static |  
 |-------|-------|   
 |       |Runtime|   
 |       | Steck |   
 |-------|-------|
-| nesne | Heap  |   Program içerisinde hafızaya alınan nesneler kulanımı bittikten sonra yerlerini farklı class
-|       |       |       verirler
+| nesne | Heap  |   
+
+
+Nesnenin yeri bellidir sabittir program başlar ve değişmez
+
+Program içerisinde hafızaya alınan nesneler kulanımı bittikten sonra yerlerini farklı class
+verirler
 
 
 > Refactoring: codun çalışması değiştirilmeden tekrardan inşa edilmesi
