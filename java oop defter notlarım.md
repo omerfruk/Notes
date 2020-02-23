@@ -16,7 +16,7 @@ aktarım gösterirler
 girilen verileri direk olarak bilgisayarımızın anlayabilecegi kodlara çevirir. fakat C gibi bizlere bir executable dosyası vermez satır satır yorumlar ve yorumlanan
 satırları çalıştırır.
 
-    >İşlemciler
+    > İşlemciler
         
         1.Fetc(al)
         2.Decode(çözümle)
@@ -25,23 +25,23 @@ satırları çalıştırır.
 
 tarzında çalışırken **jvm** ilk 2 satırı yapar ve 3. satırımızı yanı **Execut** işlemini işlemcilere bırakır.
     
-    graph TD;
-    
-        Java code-derleme(javac)->Byte code;
-        Byte code-a.class->JVM for Windows;
-        Byte code-a.class->JVM for Linux;
-        Byte code-a.class->JVM for Mac;
+  graph TD;
+  
+        Java code - derleme(javac) -> Byte code;
+        Byte code - a.class -> JVM for Windows;
+        Byte code - a.class -> JVM for Linux;
+        Byte code - a.class -> JVM for Mac;
 
 C dilinde 
 
-    *#define Adam = 3
-    *Const int Adam = 3
-    Diye iki farklı veri tipimiz bulunmaktadır. **#define** ön bellekte adam görülen her yere 3 yazılmasına sebeb olur bizim işlemcimiz Adam diye bir veriyi görmez.
+  define Adam = 3
+  Const int Adam = 3
+  Diye iki farklı veri tipimiz bulunmaktadır. **#define** ön bellekte adam görülen her yere 3 yazılmasına sebeb olur bizim işlemcimiz Adam diye bir veriyi görmez.
     **Const int** te ise verilen Adam değişkenine başka bir değer atayamayız her zaman Adam 3 olarak kalackatır 
 
 Java dilinde
 
-    final; diye bir değişkenimiz var bu değişkenimiz ise **C** deki **define** ve **Const int** değerlerimizie benziyorlar **final** değişkenimiz önceden bir değer almaz
+   final; diye bir değişkenimiz var bu değişkenimiz ise **C** deki **define** ve **Const int** değerlerimizie benziyorlar **final** değişkenimiz önceden bir değer almaz
     ne zaman biz bir değer veririz o zaman o değeri alır ve kilitler 
 
 #### Hafıza
@@ -65,7 +65,7 @@ Public static void main(string[] args)
     metodun değerlerine bir dizi parametresi göndermiyiz. Metodlarda direk olarak dizi parametresi giremediğimizden dolayı bunu bir indes olarak veririz
     >string[] args dizinin indislerini parametre olarak metoda gönderilmesine yarar 
 
-##Nesneye dayalı programlamanın temelleri
+## Nesneye dayalı programlamanın temelleri
 
 ### 1.**Abstraction-information hiding (soyutlama)**
 ### 2.**Encapsulation (kapsülleme)**
@@ -74,10 +74,10 @@ Public static void main(string[] args)
 
 #### 1.Abstraction
 > Ayrıntılardan uzaklaşma soyutlama 
-    > **ör** bir klavyeyi düşünelim üzerinde tuşlar bulunuyor basınca bişeyleri ekrana yazmamıza yardımcı olan bir aygıt 
-    fakat bunu devresel olarak düşündüğümüz zaman ne kadar karmaşık bir hal alacağını düşünebilirz her bir harfin her bir tuşun 
-    aslında bir code'a takabul ettiğini düşünerek çalışmak gayet derecede zor olması lazım gelir. Bundan dolayı nesneye dayalı programlamada ne kadar 
-    sade, insanların daha basit anlayıp kompleks yapılardan uzaklaştıra işlemidir. 
+> **ör** bir klavyeyi düşünelim üzerinde tuşlar bulunuyor basınca bişeyleri ekrana yazmamıza yardımcı olan bir aygıt 
+ fakat bunu devresel olarak düşündüğümüz zaman ne kadar karmaşık bir hal alacağını düşünebilirz her bir harfin her bir tuşun 
+aslında bir code'a takabul ettiğini düşünerek çalışmak gayet derecede zor olması lazım gelir. Bundan dolayı nesneye dayalı programlamada ne kadar 
+sade, insanların daha basit anlayıp kompleks yapılardan uzaklaştıra işlemidir. 
 
 
             sınıf içi class içi  kalıtım  paket
