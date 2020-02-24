@@ -34,10 +34,11 @@ tarzında çalışırken **jvm** ilk 2 satırı yapar ve 3. satırımızı yanı
 
 C dilinde 
 
-  define Adam = 3
+  define Adam 3
   Const int Adam = 3
   Diye iki farklı veri tipimiz bulunmaktadır. **#define** ön bellekte adam görülen her yere 3 yazılmasına sebeb olur bizim işlemcimiz Adam diye bir veriyi görmez.
-    **Const int** te ise verilen Adam değişkenine başka bir değer atayamayız her zaman Adam 3 olarak kalackatır 
+  
+ **Const int** te ise verilen Adam değişkenine başka bir değer atayamayız her zaman Adam 3 olarak kalackatır 
 
 Java dilinde
 
@@ -81,13 +82,36 @@ Public static void main(string[] args)
 aslında bir code'a takabul ettiğini düşünerek çalışmak gayet derecede zor olması lazım gelir. Bundan dolayı nesneye dayalı programlamada ne kadar 
 sade, insanların daha basit anlayıp kompleks yapılardan uzaklaştıra işlemidir. 
 
+### Abstraction
+* bir varlığın **ne** olduğu ile ilgilenir **nasıl** olduğuyla değil 
 
-            sınıf içi class içi  kalıtım  paket
-public  +   |  /+/   |   /+/    |  /+/   |  /+/  |
-            |        |          |        |       |
-private  -  |  /+/   |   /-/    |  /-/   |  /-/  |
-            |        |          |        |       |
-protected # |  /+/   |   /+/    |  /+/   |  /-/  |
-            |        |          |        |       |
-pakege   ~  |  /+/   |   /+/    |  /+/   |  /-/  |
+![](https://images.pexels.com/photos/979247/pexels-photo-979247.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
 
+şimdi kediyle ilgili bir class oluşrutalım ve buradan türetecegimiz nesneler farklı bakış açılarından oluşsun (bi veteriner bi petshop vb.) 
+
+~~~java
+   public class kedi{
+        string: kuyruk
+        string: cinsi
+        yasi: int 
+        asıdurumu: boolean
+        fiyati: duble
+       ------------------------- 
+        miyav()
+        asiyap(asix)
+        getFiyat
+    }
+~~~
+
+* bir bakış açısı ile bir varlıgın ne oldugu üzerinde durur **(böylelikle yazdığımız kılastaki bakış açıları birden çok olduğundan yanlıştır)** 
+
+* single responsibility prhciple
+     > bir sınıfın yanlız bir sorumluluğu olmalı 
+     ~~~java
+     fiyat:duble
+     texture:jpg
+     koordinat:3D koordinat 
+     -------------------------------
+     ciz();
+     getFiyat();
+     ~~~
