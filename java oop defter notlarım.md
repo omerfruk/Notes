@@ -115,3 +115,78 @@ sade, insanların daha basit anlayıp kompleks yapılardan uzaklaştıra işlemi
      ciz();
      getFiyat();
      ~~~
+     
+## Abstract Data Type (ADT) ((steck-yığın örneği))
+
+~~~java
+    public class stack{
+        public int[] array;
+        public int top;
+        
+        public stack(){
+            array =new int [10];
+            top=0;
+          }
+        public boolean isEmpyty(){
+        if (top <=0)
+        return true;
+        return false;
+        } 
+        public boolean isFull(){
+        if (top >= array.lenght)
+        return true;
+        return fasle;
+        }  
+        public void push(int value){
+        if (!isFull())
+        array[top++]=value;
+        else 
+        System.out.print("stack full");
+        }
+        public int pop(){
+        if (!isEmpty())
+        return array[--top];
+        }
+    }
+~~~
+yukarıda verilmiş olan bir kod dizisinde stack data type örnek kodu verilmiştir aşagılarda açıklayarak ilerliyeceğiz
+
+![](https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2013/03/stack.png )
+
+yukarıda görüldüğü gibi stack yapısında veriler üst üste biner ve sadece **üstten ekleme olur ve en üstten çekme olur**     
+
+   > örnek verecek olursak bir tabak yığını düşünelim bu tabakları alırken ve yerlerine koyarken sadece en üsten alıp en üstten ekleme yapıyoruz 
+
+şimdi bizim stacke kodumuzu kulanacak bir program geliştiricisi kalkıp şöyle bir code yazdı 
+
+~~~java
+public class Deneme{
+public static void main(String[] args){
+static s = new static();
+s.push(5);
+s.push(3);
+int a = s.pop();
+s.array[5]=7;   //1.hata
+s.top = 20;     //2. hata
+}
+}
+~~~
+
+   > şu anda gördüğümüz üzere **array[5]**'i 7 ye eşitledik peki bizim top noktamız orasımıydı ya daha üstte iken biz          > kalkıp onun üzerine yazmış bulunduk veya daha altta iken biz stack yapısını bozup arada boşluk bıraktık  
+   > aynı şekilde **s.top=20** yazan bölmede bizim önceden tanımladığımız top değeriniz bozup 20 yaptı
+
+Şu anda bizim yazmış oldugumuz stacke kodunun bir anlamı bulunmamaktadır çünki yapı tamamıyla bozulmuştur peki biz bu olanların önüne nasıl geçicez ?
+Tabikide bunun bir yöntemi var 
+
+#### Bilgi saklama (infarmatıon hiding)
+- gerçekleştirme ayrıntılarını gizlenmesi 
+- bilgi sakalam 
+   - kapsülleme 
+   - erişim kısıtlama 
+- bilgi sakalama olmazsa 
+    1. Abstraction ortadan kalkar 
+    2. Kullanıcının hata yapmasına neden olur 
+    3. Bakımı zorlaşır 
+    
+    
+##### bundan dolayı sınıf tanımlamalarında önem vermemiz lazım gelir 
