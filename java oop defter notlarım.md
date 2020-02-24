@@ -179,14 +179,54 @@ s.top = 20;     //2. hata
 Tabikide bunun bir yöntemi var 
 
 #### Bilgi saklama (infarmatıon hiding)
-- gerçekleştirme ayrıntılarını gizlenmesi 
-- bilgi sakalam 
-   - kapsülleme 
-   - erişim kısıtlama 
-- bilgi sakalama olmazsa 
+- Gerçekleştirme ayrıntılarını gizlenmesi 
+- Bilgi sakalam 
+   - Kapsülleme 
+   - Erişim kısıtlama 
+- Bilgi sakalama olmazsa 
     1. Abstraction ortadan kalkar 
     2. Kullanıcının hata yapmasına neden olur 
     3. Bakımı zorlaşır 
     
     
-##### bundan dolayı sınıf tanımlamalarında önem vermemiz lazım gelir 
+##### Bundan dolayı sınıf tanımlamalarında önem vermemiz lazım gelir 
+
+## Sınıf öğeleri 
+
+#### Methodlar (prosedür? - fonksiyon?)
+
+syntax:
+~~~java
+ErişimOperetörü DönenTip methodAdı (parametre){
+-
+-
+-
+-
+}
+~~~
+
+> Metod adı : parametrelerden önceki isim
+> Metod imzsaı : metodların tamamen aynı yazılması 
+#### Method overloading
+Bir sınıfın içinde aynı adlı farklı imzaya sahip methodların bulunmasıdır 
+
+### Static method 
+Method tanımında static eklenen sınıf methodları  
+
+### Dinamik method 
+Method tanımında static eklenmeyen nesne metodları
+
+--------------------------------------------------------------
+
+## Construction
+
+- **Görevi** 
+    - 1-> Nesneyi ilklemek (oluşturmak deği)
+    - 2-> "new" operetörlerine sınıfın bir örneğini (nesnesini) üretmesi gerektiğini söyler 
+- Yapılandırıcı method adı sınıf adı ile aynıdır 
+- Bir sınıfın içinde birden fazla yapılandırıcı bulunabilir 
+- Bir sınıf içerisinde yapılandırıcı method yoksa varsayılan **(default)** yapılandırıcı devreye girer 
+ ~~~java 
+ stack s = new stack();
+ ~~~
+ - Sınıf içinde bir construction varsa varsayılan constructor devreden çıkar
