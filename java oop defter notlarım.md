@@ -46,12 +46,9 @@ Java dilinde
 
 #### Hafıza
 
-|       |       |   
 |adam   |static |  
 |-------|-------|   
-|       |Runtime|   
-|       | Steck |   
-|-------|-------|
+|       |Runtime Steck|   
 | nesne | Heap  |   
 
 
