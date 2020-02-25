@@ -229,4 +229,5 @@ Method tanımında static eklenmeyen nesne metodları
  ~~~java 
  stack s = new stack();
  ~~~
- - Sınıf içinde bir construction varsa varsayılan constructor devreden çıkar
+ - Sınıf içinde bir construction varsa varsayılan constructor devreden çıkar 
+
