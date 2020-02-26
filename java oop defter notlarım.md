@@ -222,6 +222,7 @@ Method tanımında static eklenmeyen nesne metodları
 
 - **Görevi** 
     - 1-> Nesneyi ilklemek (oluşturmak deği)
+            - olusturulan classlara ilk degerleri verir
     - 2-> "new" operetörlerine sınıfın bir örneğini (nesnesini) üretmesi gerektiğini söyler 
 - Yapılandırıcı method adı sınıf adı ile aynıdır 
 - Bir sınıfın içinde birden fazla yapılandırıcı bulunabilir 
