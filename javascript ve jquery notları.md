@@ -137,9 +137,21 @@ function getArea(width,height){
  
  var wallTwo = calculateArea(8, 5);
  ~~~
+ 
+## GETTING MULTIPLE VALUES OUT OF A FUNCTION 
+Functions can return more than one value using an array.
+For example, this function calculates the area and volume of a box. 
 
-
-
+~~~js
+function getSize (width, height, depth) {
+var area = width * height;
+var volume = width * height * depth;
+var sizes= [area , volume];
+return sizes;
+}
+var areaOne = getSize (3, 2, 3)[0];
+var volumeOne = getSize (3, 2, 3)[1];
+~~~
 
 ## What is an object 
 
