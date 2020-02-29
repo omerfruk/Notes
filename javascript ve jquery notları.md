@@ -124,6 +124,23 @@ function getArea(width,height){
     return width×height;
 }
 ~~~
+
+## GETTING A SINGLE VALUE OUT OF A FUNCTION
+ Some funciton return information to the code that called them. For example, when perform a calculation, they return the result.
+ 
+ ~~~js
+ function calculateArea(weidth, height){
+ var area = weidth*height;
+ return area;
+ }
+ var wallOne = calculateArea(3, 5);
+ 
+ var wallTwo = calculateArea(8, 5);
+ ~~~
+
+
+
+
 ## What is an object 
 
 Objects group together a set of variables and functions to create a model 
@@ -148,3 +165,7 @@ has an index number and a value.)
 set of statements to run if the function is called. 
 * Objects consist of a set of name/value pairs 
 (but the names are referred to as keys). 
+
+
+
+
