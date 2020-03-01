@@ -242,3 +242,21 @@ element.forEach(function(el){
 
 ~~~
 
+## Element Attribute
+
+~~~js 
+console element = document.querySelector("#clear-todos")
+
+console.log(element.id);           // we can learn ID of element
+console.log(element.ClassName);    // To print class name 
+console.log(element.ClassList);    // we can print Class list, what the have in the class 
+console.log(element.classList[1]); // what you want to learn for which index
+console.log(element.textContent);  // shows only text data 
+console.log(element.innerHTML);    // show all html tag's and data
+console.log(element.href);         // shows the link in
+console.log(element.style);        // we can see css attribute and add css attribute
+
+~~~
+
+
+
