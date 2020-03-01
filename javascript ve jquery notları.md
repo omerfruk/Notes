@@ -245,7 +245,7 @@ element.forEach(function(el){
 ## Element Attribute
 
 ~~~js 
-console element = document.querySelector("#clear-todos")
+console element = document.querySelector("#clear-todos");
 
 console.log(element.id);           // we can learn ID of element
 console.log(element.ClassName);    // To print class name 
@@ -257,6 +257,21 @@ console.log(element.href);         // shows the link in
 console.log(element.style);        // we can see css attribute and add css attribute
 
 ~~~
+
+### Changing Stayle and Element Attribute
+
+~~~js
+console element = document.querySelector("#clear-todos");
+
+element.classNAme = "btn btn-success";   // Adding a new stayle to button
+element.stayle.color = "#000";           // Adding new color 
+element.styale.marginLeft = "20px"       // Adding margin to left
+element.href = "https://www.google.com/" // New link added 
+element.taget = "_blank";       
+                                        
+                                        //And more
+~~~
+
 
 
 
