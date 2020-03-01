@@ -199,10 +199,46 @@ element = document.getElementById("task-title");
 > Bir class'tan birden fazla olacaktır bundan dolayı eğer sadece bir veriyi seçmek istersek onun indexsini girmemiz lazım 
         
 ~~~js
-let Element: 
+let element: 
 
-Element = document.getElementByClassName("list-group-item");
-Element = document.getElementByClassName("card-header")[3];
+element = document.getElementByClassName("list-group-item");
+element = document.getElementByClassName("card-header")[3];
+
+~~~
+### Element Tag'e Göre Seçme
+
+~~~js
+let element: 
+
+element = document.getElementByTagName("div");
+
+~~~
+
+### Query Selector - Css Selector - Tek Bir Element
+
+~~~js
+let element;
+
+element = document.querySelector("#todo-form");
+element = document.querySelector("#tasks-title");
+
+element = document.querySelector(".list-gruop-item");
+
+element = document.QuerySelector("li");
+element = document.QuerySelector("div");
+~~~
+
+### QuerySelectorAll - Tüm Elementleri Seç
+
+~~~js
+
+let element;
+
+element = document.querySelectorAll(".list-gruop-item")  //  Node list
+
+element.forEach(function(el){
+      console.log(el);
+})
 
 ~~~
 
