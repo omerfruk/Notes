@@ -178,6 +178,9 @@ set of statements to run if the function is called.
 * Objects consist of a set of name/value pairs 
 (but the names are referred to as keys). 
 
+## WHAT IS A DOCUMENT OBJECT MODEL   
 
+Html tags come together to form document object model.
+We can manipulate our elements with javascript on this document
 
 
