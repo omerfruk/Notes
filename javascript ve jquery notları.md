@@ -183,4 +183,14 @@ set of statements to run if the function is called.
 Html tags come together to form document object model.
 We can manipulate our elements with javascript on this document
 
+## Veri Seçimleri 
 
+### Element ID'e Göre Seçme
+~~~js
+
+let element;
+
+element = document.getElementById("todo-form");
+element = document.getElementById("task-title");
+
+~~~
