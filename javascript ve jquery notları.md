@@ -194,3 +194,15 @@ element = document.getElementById("todo-form");
 element = document.getElementById("task-title");
 
 ~~~
+
+### Element Class'a Göre Seçme 
+        Bir class'tan birden fazla olacaktır bundan dolayı eğer sadece bir veriyi seçmek istersek onun indexsini girmemiz lazım 
+        
+~~~js
+let Element: 
+
+Element = document.getElementByClassName("list-group-item");
+Element = document.getElementByClassName("card-header")[3];
+
+~~~
+
