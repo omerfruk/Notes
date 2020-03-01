@@ -273,5 +273,16 @@ element.taget = "_blank";
 ~~~
 
 
+### Note
+What is the difference between .innerHTML and .other attribute 
+
+For example
+~~~js
+element.textContent = "silin"
+element.textContent = "<span> silin <span>"
+element.innerHTML = "<span> silin <span>"
+~~~
+ 
+ if we want to changing only textContent, maybe use .textContent or .innerHTML but if we want to changing text, style, ..., more we mast be use .innerHTML. Because .innerHTML changing all html tag's, .textContent changing only text
 
 
