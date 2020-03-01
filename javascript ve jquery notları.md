@@ -196,7 +196,7 @@ element = document.getElementById("task-title");
 ~~~
 
 ### Element Class'a Göre Seçme 
-        Bir class'tan birden fazla olacaktır bundan dolayı eğer sadece bir veriyi seçmek istersek onun indexsini girmemiz lazım 
+> Bir class'tan birden fazla olacaktır bundan dolayı eğer sadece bir veriyi seçmek istersek onun indexsini girmemiz lazım 
         
 ~~~js
 let Element: 
