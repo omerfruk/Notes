@@ -281,6 +281,18 @@ Ogrenci ogr3 = new Ogrenci(ogr2)
 Ogrenci ogr5 = ogr2.clone();
 ~~~
 
+## Parametre Geçirme Yöntemleri 
+
+### 1-> pass-by-value;
+**Metoda sadece değer geçirilir**
+### 2-> Pass-by-reference;
+**Metod değişkeni sadece adresi geçirilir**
+### 3-> pass-by-OutputValue;
+**Metoda geri döndürülecek değeri tutacak adresi bilgisi gönderilir**
+### 4-> pass-by-Name;
+**Metoda değişkenin adı geçirilir**
+
+### **JAVADA HERŞEY PASS-BY VALUE OLARAK GEÇİRİLİR**
 
 
 
