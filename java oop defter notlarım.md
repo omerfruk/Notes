@@ -237,7 +237,7 @@ Method tanımında static eklenmeyen nesne metodları
     * Parametre almaz.
     * Eğer sınıfta bir constructor yazılmadıysa Java otomatik üretir 
 ~~~java
-public SınıfAdı (){
+public SınıfAdi (){
 }
 ~~~
 
@@ -252,10 +252,10 @@ int, double, float için 0
 ~~~java
 public class Ogrenci{
 private int no ;
-private String adı;
+private String adi;
     public Ogrenci(int snot String sadi){
         no=sno;
-        adı=sadı;        
+        adi=sadi;        
     }
 // Eğer default constructor yapmak istersek
 
@@ -265,11 +265,21 @@ Ogrenci ogr = new Ogrenci ();
 
 Ogrenci ogr = new Ogrenci (2563 ,"ali");
 }
-
 ~~~
-
-
-
+#### 3-> Copy constroctor 
+    * Parametre olarak kopyası alınacak nesnenin referansı geçirilir
+    * Bu referans ile nesnenin alt alanları ilklenir 
+~~~java 
+public Ogrenci(Ogrenci kopya){
+no = kopya.getNo();
+adı = kopya.getAdi();
+Ogrenci ogr3 = new Ogrenci(ogr2)
+} 
+~~~
+        clone() Metodu bir nesnenin kopyasını almak için kullanılır
+~~~java
+Ogrenci ogr5 = ogr2.clone();
+~~~
 
 
 
