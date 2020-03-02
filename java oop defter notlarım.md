@@ -246,7 +246,27 @@ Java varsayılan değerler
 String, Dizi, referans için Null
 int, double, float için 0
 
+#### 2-> Parametrized constructor (parametreli yapılandırıcı)
+    * Dışardan parametre alır
+    * Dışardan alınan parametre alt alanların ilklemesinde kullanılır
+~~~java
+public class Ogrenci{
+private int no ;
+private String adı;
+    public Ogrenci(int snot String sadi){
+        no=sno;
+        adı=sadı;        
+    }
+// Eğer default constructor yapmak istersek
 
+Ogrenci ogr = new Ogrenci ();
+
+//parametrized constructor için ise 
+
+Ogrenci ogr = new Ogrenci (2563 ,"ali");
+}
+
+~~~
 
 
 
