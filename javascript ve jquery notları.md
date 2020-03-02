@@ -285,4 +285,19 @@ element.innerHTML = "<span> silin <span>"
  
  **if we want to changing only textContent, maybe use .textContent or .innerHTML but if we want to changing text, style, ..., more we mast be use .innerHTML. Because .innerHTML changing all html tag's, .textContent changing only text**
 
+~~~js
+const element = document.querySelectorAll(".list-group-item");
+// All list-group-item select and if we want to wander in all list-group-item elements.
+We must be use this attribute
 
+elements.forEach(function(el)){
+el.style.color = "red";
+el.stayle.background = "#eee";
+
+//if we want to only one element chancing we use like this 
+let element2 = document.querySelector("li:first-child");
+//or
+let element2 = document.querySelector("li:last-child");
+console.log(element2);
+}
+~~~
