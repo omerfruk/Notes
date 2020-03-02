@@ -301,3 +301,16 @@ let element2 = document.querySelector("li:last-child");
 console.log(element2);
 }
 ~~~
+
+#### Child Node - Including text (takes all the children)
+~~~js
+value = todolist.childNodes;
+value = todolist.childNodes[0];
+
+~~~
+#### Children - Element
+
+~~~js
+value = todoList.children;
+value = todoList.children[2];
+~~~
