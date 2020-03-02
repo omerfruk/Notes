@@ -232,3 +232,26 @@ Method tanımında static eklenmeyen nesne metodları
  ~~~
  - Sınıf içinde bir construction varsa varsayılan constructor devreden çıkar 
 
+### Constuctor type 
+#### 1-> Default constructor
+    * Parametre almaz.
+    * Eğer sınıfta bir constructor yazılmadıysa Java otomatik üretir 
+~~~java
+public SınıfAdı (){
+}
+~~~
+
+bu yapılandırma alt alanlara var sayılan değeri atanır 
+Java varsayılan değerler
+String, Dizi, referans için Null
+int, double, float için 0
+
+
+
+
+
+
+
+
+
+
