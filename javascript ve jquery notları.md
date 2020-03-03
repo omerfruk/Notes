@@ -358,3 +358,27 @@ todos[1].remove();
 todoList.removeChild(todoList.lastElementChilde);
 todoList.removeChild(todos[3]);
 ~~~
+## Changing Elements
+
+**Replace**
+~~~js
+//<h5 class="card-title" id = "task-title">todos</h5>
+// For exapmle, we want to changing this element.
+
+const cardbody = document.querySelectorAll(".card-title")[1]; 
+       // I used the querySelector attribute after using QuerySelectorAll.
+       // I do it to detect usage difference.
+const newElement = document.createElement("h3");
+       // Now we create a new <h3> element.
+
+newElement.className = "cart-title";
+newElement.id = "tasks-title";
+newElement.textContent = "new todos";
+
+        // we have to move the old element and the new element
+
+const oldElement = document.querySelector("#tasks-title");
+
+cardbody.replaceChild(newElement, oldElement);
+
+~~~
