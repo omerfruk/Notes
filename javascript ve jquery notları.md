@@ -382,3 +382,43 @@ const oldElement = document.querySelector("#tasks-title");
 cardbody.replaceChild(newElement, oldElement);
 
 ~~~
+
+## Dynamic Attribute Change, Delete, Add
+**Add and Change** 
+~~~js
+const todoInput = document.qetElemenetById("todo");
+let element;
+
+element = todoInput.classList;           // This code will show us the classes.
+
+// Now, there's tow type of add attribute 
+
+todoInput.className = "form-control newClass";
+
+//Or
+
+todoInput.classList.add("newClass");
+
+// but in my opinion second type most preferred.
+
+//or
+
+element = todoInput.getAttribute("placeholder");
+todoInput.setAttribute("placeholder","Hello");
+todoInput.setAttribute("title","Input");
+
+//or
+
+element = todoInput;
+element = todoInput.hasAttribute("name"); // Is there attribute here ?
+
+~~~
+
+**Delete**
+
+~~~js
+todoInput.classList.remove("form-control");
+todoInput.removeAttribute("name");
+~~~
+
+
