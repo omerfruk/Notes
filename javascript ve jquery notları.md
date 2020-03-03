@@ -314,3 +314,28 @@ value = todolist.childNodes[0];
 value = todoList.children;
 value = todoList.children[2];
 ~~~
+
+
+## Adding Elements
+
+If you want to add new staff we can find the example below
+~~~js
+//<a id = "clear-todos" class = "btn btn-dark" href = "#"></a> this is example for as
+// Now we prepare like this 
+
+const newLink = documant.creatElement("a");
+const cardbody = document.getElementByClassName("card-body")[1];
+
+newLink.id = "clear-todos";
+newLink.ClassName = "btn btn-danger";
+newLink.href = "https://www.google.com.tr";
+newLink.target = "_blank";
+
+// We learn to create 2 types of elements
+
+cardbody.textContent = "some thing else"; // if we use this feature, other data will probably be deleted
+// Olso we use this attribute
+const text = documetn.createTextNode("Hello")
+cardbody.appndChild(text);
+
+~~~
