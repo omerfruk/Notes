@@ -339,3 +339,22 @@ const text = documetn.createTextNode("Hello")
 cardbody.appndChild(text);
 
 ~~~
+
+## Dynamic Element Deletion
+
+Firstly me add which element we want to delete
+
+~~~js 
+const todoList = document.querySelector("ul.list-group");
+const todo = document.querySelectorAll("li.list-group-item");
+~~~
+
+#### Remove Method
+~~~js
+todos[1].remove();
+~~~
+#### Remove Child
+~~~js
+todoList.removeChild(todoList.lastElementChilde);
+todoList.removeChild(todos[3]);
+~~~
