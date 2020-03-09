@@ -292,7 +292,7 @@ Ogrenci ogr5 = ogr2.clone();
 ### 4-> pass-by-Name;
 **Metoda değişkenin adı geçirilir**
 
-### **JAVADA HERŞEY PASS-BY VALUE OLARAK GEÇİRİLİR**
+        **JAVADA HERŞEY PASS-BY VALUE OLARAK GEÇİRİLİR**
 
 
 
