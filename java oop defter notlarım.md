@@ -310,3 +310,21 @@ Ogrenci ogr5 = ogr2.clone();
 
 8-> Bir **öğrencinin** **kayıt** tarihi vardır 
 
+---------------------------------------------------------------
+
+1-) **Sınıf** :fast_forward: **Öğrenci** (has (vardır))
+
+2-) **Öğrenci** :fast_forward: **kartı** (has (vardır))
+
+3-) **Fakülte** :fast_forward: **Bölüm** (has (vardır))
+
+4-) **Üniverste** :fast_forward: **Eğitim kurumu**  ("is a" ("-dir"))
+
+5-) **Ali** :fast_forward: **Öğrenci**  ("is a" ("-dir"))
+
+6-) **Ders** :fast_forward: **Hoca** (has (vardır))
+
+7-) **Öğrenci** :fast_forward: **Kartı** (use (kullanır))
+
+8-) **Öğrenci** :fast_forward: **Tarih** (has (vardır))
+
