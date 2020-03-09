@@ -327,5 +327,13 @@ Ogrenci ogr5 = ogr2.clone();
 7-) **Öğrenci** :fast_forward: **Kartı** (use (kullanır))
 
 8-) **Öğrenci** :fast_forward: **Tarih** (has (vardır))
+      
+> yapısal olarak bakıldığında 1. ile 6. **A** benzerken 2. 3. ve 8. de **B** (**A** ile **B** aşağıda açıklanacaktır). 
+      
+### Has a (Vardır ilişkisi)
+1-) Kapsayan kapasanan ilişkisi
 
-      yapısal olarak bakıldığında 1. ile 6. birbirlerine benzerken 2. 3. ve 8. de birbirlerine benzemektedir 
+2-) Kapsayan kapsanan'a sahip mi ?
+
+**A**  :fast_forward:  :small_blue_diamond: Has a ilişkisi 		
+:small_blue_diamond: "is a part of " veya "owns" ilişkisi var. (**Composition**)
