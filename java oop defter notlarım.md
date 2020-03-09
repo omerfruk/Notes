@@ -293,7 +293,20 @@ Ogrenci ogr5 = ogr2.clone();
 **Metoda değişkenin adı geçirilir**
 
         **JAVADA HERŞEY PASS-BY VALUE OLARAK GEÇİRİLİR**
+## Sınıflar -Nesneler Arasındaki İlişkiler 
+1-> **Sınıfta** **öğrenciler** vardır 
 
+2-> Her **öğrencinin** bir **kartı** vardır  
 
+3-> **Fakülte** **böümlerden** oluşur 
 
+4-> **Üniverste** bir **eğitim kurumudur**
+
+5-> **Ali** bir **öğrencidir**
+
+6-> Bir **dersin** bir **hocası** bulunur 
+
+7-> **Öğrenciler** **kart** ile giriş yapar 
+
+8-> Bir **öğrencinin** **kayıt** tarihi vardır 
 
