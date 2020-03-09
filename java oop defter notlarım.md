@@ -337,3 +337,11 @@ Ogrenci ogr5 = ogr2.clone();
 
 **A**  :fast_forward:  :small_blue_diamond: Has a ilişkisi 		
 :small_blue_diamond: "is a part of " veya "owns" ilişkisi var. (**Composition**)
+
+**B**  :fast_forward:   Sadece "has a" ilişkisi (**Aggregation**)
+
+> Has a ilişkisi **Aggegation** ile kullanılır **Composition** **Aggegation**'ın özel bir türüdür  
+
+#### Aggregation 
+1) Has a ilişkisi
+2)  Nesnelerin yaşamları birbirlerine bağlı değildir 
