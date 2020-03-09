@@ -16,7 +16,7 @@ aktarım gösterirler
 girilen verileri direk olarak bilgisayarımızın anlayabilecegi kodlara çevirir. fakat C gibi bizlere bir executable dosyası vermez satır satır yorumlar ve yorumlanan
 satırları çalıştırır.
 
-    > İşlemciler
+      İşlemciler
         
         1.Fetc(al)
         2.Decode(çözümle)
