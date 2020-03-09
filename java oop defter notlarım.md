@@ -328,3 +328,4 @@ Ogrenci ogr5 = ogr2.clone();
 
 8-) **Öğrenci** :fast_forward: **Tarih** (has (vardır))
 
+      yapısal olarak bakıldığında 1. ile 6. birbirlerine benzerken 2. 3. ve 8. de birbirlerine benzemektedir 
