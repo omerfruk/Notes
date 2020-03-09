@@ -344,4 +344,32 @@ Ogrenci ogr5 = ogr2.clone();
 
 #### Aggregation 
 1) Has a ilişkisi
-2)  Nesnelerin yaşamları birbirlerine bağlı değildir 
+2) Nesnelerin yaşamları birbirlerine bağlı değildir 
+
+~~~js
+public class Ders {
+	private string dersAdı;
+	private hoca;
+	private ogrenci [] ogrenciler;
+public ders (string Adı, hoca,int k )
+{
+	dersAdı = adı;
+	this.h = hoca;
+	ogrenciler = new Ogrenci[k]; 
+}
+public void set hoca(hoca h)
+{
+	this.h=h;
+}
+public static main (String args[])
+{
+	dersAdı ndp = new Ders("nesne,100");
+	hoca d = new Hoca("dogan");
+	ndp.setHoca(d);
+	ders td = new Ders("tasarım",d,30);
+	ndp = null; // ndp yı yoketme 
+}
+}
+~~~
+
+> Yukarda gördüğümüz üzere (ndp = null) tarzında bir kod yazarak (ndp)  yi sıfırlıyoruz burada **Aggregation** mantığı ile bakacak olursak nesnemiz silinse bile ona bağlı özellikler veya başka nesneler metodlar her hangi bir verimiz başka bir nesneye de bağlı olabileceğinden nesnenin sıfırlanmasından etkilenmeyebilir.
