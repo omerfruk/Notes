@@ -24,13 +24,16 @@ satırları çalıştırır.
     
 
 tarzında çalışırken **jvm** ilk 2 satırı yapar ve 3. satırımızı yanı **Execut** işlemini işlemcilere bırakır.
-    
-  graph TD;
-  
-        Java code - derleme(javac) -> Byte code;
-        Byte code - a.class -> JVM for Windows;
-        Byte code - a.class -> JVM for Linux;
-        Byte code - a.class -> JVM for Mac;
+
+
+```mermaid
+
+graph TD
+
+A[Java code ] -- Derleme*javac*  --> B((Byet code ))
+B -- a.class --> D{JVM for different OS}
+
+```
 
 C dilinde 
 
