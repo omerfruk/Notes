@@ -373,3 +373,26 @@ public static main (String args[])
 ~~~
 
 > Yukarda gördüğümüz üzere (ndp = null) tarzında bir kod yazarak (ndp)  yi sıfırlıyoruz burada **Aggregation** mantığı ile bakacak olursak nesnemiz silinse bile ona bağlı özellikler veya başka nesneler metodlar her hangi bir verimiz başka bir nesneye de bağlı olabileceğinden nesnenin sıfırlanmasından etkilenmeyebilir.
+
+#### Composition
+1) "Has a" + "is part of " ilişkisi.
+
+2) Kapsayanın hayatı biterse kapsananın da hayatı sona erer.
+
+~~~js
+public class Ogrenci{
+	private string adı;
+	private kart k;
+public Ogrenci(int k-id,string adı)
+{
+this.adı=adı;
+k= new kart (k-id);
+}
+public class kart {
+private int k-id;
+public kart (int d){
+k-id=d;
+}
+}
+}
+~~~
