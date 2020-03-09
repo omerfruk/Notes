@@ -399,3 +399,5 @@ k-id=d;
 }
 }
 ~~~
+
+> **Composition** bilgileri saklar ve dişardan ne bilgi alır ne de dışarıya bilgi verir (**set-get metodları**) böylelikle bir nesnenin referansı başka bir ver itarafından tutulamaz ve buradaki nesnemizi öldürdüğümüz zaman tüm metodlar veriler beraberinde ölürler 
