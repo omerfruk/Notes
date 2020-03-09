@@ -388,16 +388,35 @@ public class Ogrenci{
 	private kart k;
 public Ogrenci(int k-id,string adı)
 {
-this.adı=adı;
-k= new kart (k-id);
+	this.adı=adı;
+	k= new kart (k-id);
 }
-public class kart {
-private int k-id;
-public kart (int d){
-k-id=d;
+	public class kart {
+	private int k-id;
+	public kart (int d){
+	k-id=d;
 }
+public Ogrenci(string adı)
+{
+	this.adı=adı;
+	k= null; //1. ihtimal 
+	k= new kart (); //2. ihtimal
+}
+public void set kart (int id)
+{
+	k= new kart (id);
+}
+public int getkartId()
+{
+	return k.getId();
+}
+}
+public static void main (string args[])
+{
+Ogrenci ogr = new Ogrenci(1234586,"Ali");
+int id = ogr.getkartId();
 }
 }
 ~~~
 
-> **Composition** bilgileri saklar ve dişardan ne bilgi alır ne de dışarıya bilgi verir (**set-get metodları**) böylelikle bir nesnenin referansı başka bir ver itarafından tutulamaz ve buradaki nesnemizi öldürdüğümüz zaman tüm metodlar veriler beraberinde ölürler 
+> **Composition** bilgileri saklar ve dişardan ne bilgi alır ne de dışarıya bilgi verir böylelikle bir nesnenin referansı başka bir ver tarafından tutulamaz ve buradaki nesnemizi öldürdüğümüz zaman tüm metodlar veriler beraberinde ölürler. 
