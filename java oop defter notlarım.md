@@ -349,7 +349,7 @@ Ogrenci ogr5 = ogr2.clone();
 1) Has a ilişkisi
 2) Nesnelerin yaşamları birbirlerine bağlı değildir 
 
-~~~js
+~~~java
 public class Ders {
 	private string dersAdı;
 	private hoca;
@@ -382,7 +382,7 @@ public static main (String args[])
 
 2) Kapsayanın hayatı biterse kapsananın da hayatı sona erer.
 
-~~~js
+~~~java
 public class Ogrenci{
 	private string adı;
 	private kart k;
