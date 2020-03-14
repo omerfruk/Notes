@@ -419,4 +419,17 @@ int id = ogr.getkartId();
 }
 ~~~
 
-> **Composition** bilgileri saklar ve dişardan ne bilgi alır ne de dışarıya bilgi verir böylelikle bir nesnenin referansı başka bir ver tarafından tutulamaz ve buradaki nesnemizi öldürdüğümüz zaman tüm metodlar veriler beraberinde ölürler. 
+> **Composition** bilgileri saklar ve dişardan ne bilgi alır ne de dışarıya bilgi verir böylelikle bir nesnenin referansı başka bir ver tarafından tutulamaz ve buradaki nesnemizi öldürdüğümüz zaman tüm metodlar veriler beraberinde ölürler.
+
+# Syntax 
+### Arayy
+
+~~~java
+
+int [] a;              // Bu şekilde diziler tanımlarız
+int a[]={1,2,3,4,5,6}; //  Diziyi aşagıdaki şekilde çagırırız.
+
+a= new int [10]; // Diziyi oluşturma
+
+
+~~~
