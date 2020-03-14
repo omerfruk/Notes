@@ -431,7 +431,16 @@ int a [] = {2,3,5,6,96};
 int b[] = a;
 ~~~
 > kopyalanacak olan dizi ile kopya olan dizi rem de aynı yeri gösterecek (pointer misali) burada biz **b[]** dizisinde bir veri değiştiridik mi otomatik olarak **a[]** dizisnde de değişiklik gözlenir  
+### Deep copy (derin kopyalama)
+~~~java
+int b[] = new int [a.length]; // burada a dizisinin uzunlugunu b dizisine atadık
 
+
+for (int i =0;i<a.length;i++) // burada ise teker teker verileri diğer diziye kaydetme 
+{
+b[i]=a[i]
+}
+~~~
 ### Arayy
 ~~~java
 
