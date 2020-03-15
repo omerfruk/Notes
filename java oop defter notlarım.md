@@ -109,7 +109,8 @@ sade, insanların daha basit anlayıp kompleks yapılardan uzaklaştıra işlemi
 * bir bakış açısı ile bir varlıgın ne oldugu üzerinde durur **(böylelikle yazdığımız kılastaki bakış açıları birden çok olduğundan yanlıştır)** 
 
 * single responsibility prhciple
-     > bir sınıfın yanlız bir sorumluluğu olmalı 
+     > bir sınıfın yanlız bir sorumluluğu olmalı
+      
      ~~~java
      fiyat:duble
      texture:jpg
