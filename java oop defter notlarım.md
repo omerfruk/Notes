@@ -284,6 +284,34 @@ Ogrenci ogr3 = new Ogrenci(ogr2)
 ~~~java
 Ogrenci ogr5 = ogr2.clone();
 ~~~
+###  Getters and Setters
+This article discusses getters and setters; the standard way to provide access to data in Java classes.
+###  Using a setter or getter to implement a constraint
+Setters and Getters allow for an object to contain private variables which can be accessed and changed with restrictions. For example,
+
+~~~java
+public class Person {
+    private String name;
+    public String getName() {
+        return name;  
+    }
+    public void setName(String name) {
+            if(name!=null && name.length()>2)           
+            this.name = name;    
+            } 
+        }
+~~~
+In this Person class, there is a single variable: name. This variable can be accessed using the getName()
+method and changed using the setName(String) method.
+
+~~~java
+public String getName(){   
+    if(name.length()>16)      
+    return "Name is too large!";   
+    else      
+    return name; 
+    }
+~~~
 
 ## Parametre Geçirme Yöntemleri 
 
