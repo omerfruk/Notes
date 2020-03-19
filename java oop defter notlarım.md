@@ -420,4 +420,42 @@ int id = ogr.getkartId();
 }
 ~~~
 
-> **Composition** bilgileri saklar ve dişardan ne bilgi alır ne de dışarıya bilgi verir böylelikle bir nesnenin referansı başka bir ver tarafından tutulamaz ve buradaki nesnemizi öldürdüğümüz zaman tüm metodlar veriler beraberinde ölürler. 
+> **Composition** bilgileri saklar ve dişardan ne bilgi alır ne de dışarıya bilgi verir böylelikle bir nesnenin referansı başka bir ver tarafından tutulamaz ve buradaki nesnemizi öldürdüğümüz zaman tüm metodlar veriler beraberinde ölürler.
+
+# Syntax 
+
+
+## copy type 
+### shallow copy (yüzeysel kopyalama )
+~~~java
+int a [] = {2,3,5,6,96};
+int b[] = a;
+~~~
+> kopyalanacak olan dizi ile kopya olan dizi rem de aynı yeri gösterecek (pointer misali) burada biz **b[]** dizisinde bir veri değiştiridik mi otomatik olarak **a[]** dizisnde de değişiklik gözlenir  
+### Deep copy (derin kopyalama)
+~~~java
+int b[] = new int [a.length]; // burada a dizisinin uzunlugunu b dizisine atadık
+
+
+for (int i =0;i<a.length;i++) // burada ise teker teker verileri diğer diziye kaydetme 
+{
+b[i]=a[i]
+}
+~~~
+### Arayy
+~~~java
+
+int [] a;              // Bu şekilde diziler tanımlarız
+int a[]={1,2,3,4,5,6}; //  Diziyi aşagıdaki şekilde çagırırız.
+
+a= new int [10]; // Diziyi oluşturma
+
+// 2 boyutlu diziler 
+
+String[][] name {
+*
+*
+*
+}
+
+~~~
