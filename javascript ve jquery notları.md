@@ -384,6 +384,7 @@ cardbody.replaceChild(newElement, oldElement);
 ~~~
 
 ## Dynamic Attribute Change, Delete, Add
+
 **Add and Change** 
 ~~~js
 const todoInput = document.qetElemenetById("todo");
@@ -432,14 +433,17 @@ clear.addEventListener("click",clearItem);
 
 function addItem(e) {
    // now ı add 2 parametres for key and values 
-   sessionStorage.setItem(addkey.value, addvalue.value); 
+   sessionStorage.setItem(addkey.value, addvalue.value);
+   //this function add key and value 
 }
 function deleteItem(e) {
-
+   sessionStorage.removeItem(deletekey.value);
+   // this function delete one key which key we want
 }
 
 function clearItem(e) {
-
+   sessionStorage.clear();
+   // This function delete all keys and values 
 }
 
 ~~~
