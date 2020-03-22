@@ -422,7 +422,7 @@ todoInput.classList.remove("form-control");
 todoInput.removeAttribute("name");
 ~~~
 
-## Session Storage - Key and Value
+### Session Storage - Key and Value
 
 If I want to for a short time use my browser's memory, I have to use "sessionStorage"
 
@@ -447,6 +447,17 @@ function clearItem(e) {
 }
 
 ~~~
+
+### Local Storage
+
+Local storage use memory for a long time 
+
+~~~js
+localStorage.setItem("move","burqee");
+localStorage.setItem("again", 50);
+/* here wi see 2 type values, one value is string, one value is intager how can browser nows which one is intager or which one is string ? If we want to save some thing in the Storage, save all values is string here  
+~~~
+
 ## Syntax Rules
 
 ### Adding a function 
