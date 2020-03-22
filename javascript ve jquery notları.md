@@ -422,3 +422,26 @@ todoInput.removeAttribute("name");
 ~~~
 
 ## Session Storage - Key and Value
+
+## Syntax Rules
+
+### Adding a function 
+
+~~~js
+
+add.addEventListener("click",addItem);
+delete.addEventListener("click",deleteItem); // now we have marked a new function
+clear.addEventListener("click",clearItem);
+
+function addItem(e) {
+
+}
+function deleteItem(e) {
+
+}
+
+function clearItem(e) {
+
+}
+
+~~~
