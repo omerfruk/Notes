@@ -423,6 +423,26 @@ todoInput.removeAttribute("name");
 
 ## Session Storage - Key and Value
 
+If I want to for a short time use my browser's memory, I have to use "sessionStorage"
+
+~~~js
+add.addEventListener("click",addItem);
+delete.addEventListener("click",deleteItem); // now we have marked a new function
+clear.addEventListener("click",clearItem);
+
+function addItem(e) {
+   // now ı add 2 parametres for key and values 
+   sessionStorage.setItem(addkey.value, addvalue.value); 
+}
+function deleteItem(e) {
+
+}
+
+function clearItem(e) {
+
+}
+
+~~~
 ## Syntax Rules
 
 ### Adding a function 
