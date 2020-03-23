@@ -453,9 +453,18 @@ function clearItem(e) {
 Local storage use memory for a long time 
 
 ~~~js
+// Save in local Storage.
 localStorage.setItem("move","burqee");
 localStorage.setItem("again", 50);
-/* here wi see 2 type values, one value is string, one value is intager how can browser nows which one is intager or which one is string ? If we want to save some thing in the Storage, save all values is string here  
+/*
+here wi see 2 type values, one value is string, one value is intager how can browser nows which one is intager 
+or which one is string ? If we want to save some thing in the Storage, save all values is string here 
+*/
+// Delete in local Storage
+localStorage.clear();
+
+
+
 ~~~
 
 ## Syntax Rules
