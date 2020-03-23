@@ -462,9 +462,6 @@ or which one is string ? If we want to save some thing in the Storage, save all 
 */
 // Delete in local Storage
 localStorage.clear();
-
-
-
 ~~~
 
 ## Syntax Rules
