@@ -486,3 +486,13 @@ function clearItem(e) {
 }
 
 ~~~
+
+## Notes
+Ride a Array and then use it like ArrayList only one function 
+~~~js
+const todos = {todo1,todo2,todo3};
+// This makes the function array list. (JSON.parse)
+// We can use it like an arraylist. 
+const value = JSON.parse(localStorage.getItem("todos"));
+conslo.log(value);
+~~~
