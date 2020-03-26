@@ -7,7 +7,7 @@ shortly, but for the moment note that:
 - The pink curly braces indicate the start and end of a code block. (Each code block could contain many more statements.)
 - The cod e in purple determines which code should run (as you will see on p149).
 
-```js
+~~~js
 {
 var today= new Date{);
 var hourNow = today.getHours{) ;
@@ -26,7 +26,7 @@ greeting 'Welcome';
 }
 document.write(greeting);
 }
-```
+~~~
 
 ### JAVASCRIPT IS CASE SENSITIVE
 
