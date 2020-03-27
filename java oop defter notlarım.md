@@ -25,16 +25,6 @@ satırları çalıştırır.
 
 tarzında çalışırken **jvm** ilk 2 satırı yapar ve 3. satırımızı yanı **Execut** işlemini işlemcilere bırakır.
 
-
-```mermaid
-
-graph TD
-
-A[Java code ] -- Derleme*javac*  --> B((Byet code ))
-B -- a.class --> D{JVM for different OS}
-
-```
-
 C dilinde 
 
   define Adam 3
