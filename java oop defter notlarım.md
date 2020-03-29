@@ -55,6 +55,7 @@ verirler
 > Refactoring: codun çalışması değiştirilmeden tekrardan inşa edilmesi
 
 Public static void main(string[] args)
+
     >Public JVM programı yorumlamaya başlarken main metodunu arar bu yüzden JVM in bulabilmesi için public veriyoruz.
     >static class tanımlamadan da çagırabilmemiz için 
     >void metodun değerini belirler 
