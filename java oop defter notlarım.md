@@ -411,7 +411,7 @@ int id = ogr.getkartId();
 ~~~
 
 > **Composition** bilgileri saklar ve dişardan ne bilgi alır ne de dışarıya bilgi verir böylelikle bir nesnenin referansı başka bir ver tarafından tutulamaz ve buradaki nesnemizi öldürdüğümüz zaman tüm metodlar veriler beraberinde ölürler.
-
+> **Aliasing** = bir nesneyi birden fazla pointer tutuyorsa buna *Aliasing* deniliyor
 # Syntax 
 
 
