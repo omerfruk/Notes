@@ -336,7 +336,7 @@ Ogrenci ogr5 = ogr2.clone();
 
 > Has a ilişkisi **Aggegation** ile kullanılır **Composition** **Aggegation**'ın özel bir türüdür  
 
-#### Aggregation 
+## Aggregation 
 1) Has a ilişkisi
 2) Nesnelerin yaşamları birbirlerine bağlı değildir 
 
@@ -368,7 +368,7 @@ public static main (String args[])
 
 > Yukarda gördüğümüz üzere (ndp = null) tarzında bir kod yazarak (ndp)  yi sıfırlıyoruz burada **Aggregation** mantığı ile bakacak olursak nesnemiz silinse bile ona bağlı özellikler veya başka nesneler metodlar her hangi bir verimiz başka bir nesneye de bağlı olabileceğinden nesnenin sıfırlanmasından etkilenmeyebilir.
 
-#### Composition
+## Composition
 1) "Has a" + "is part of " ilişkisi.
 
 2) Kapsayanın hayatı biterse kapsananın da hayatı sona erer.
