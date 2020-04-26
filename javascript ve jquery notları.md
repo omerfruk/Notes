@@ -7,7 +7,7 @@ shortly, but for the moment note that:
 - The pink curly braces indicate the start and end of a code block. (Each code block could contain many more statements.)
 - The cod e in purple determines which code should run (as you will see on p149).
 
-```js
+~~~js
 {
 var today= new Date{);
 var hourNow = today.getHours{) ;
@@ -26,7 +26,7 @@ greeting 'Welcome';
 }
 document.write(greeting);
 }
-```
+~~~
 
 ### JAVASCRIPT IS CASE SENSITIVE
 
@@ -384,6 +384,7 @@ cardbody.replaceChild(newElement, oldElement);
 ~~~
 
 ## Dynamic Attribute Change, Delete, Add
+
 **Add and Change** 
 ~~~js
 const todoInput = document.qetElemenetById("todo");
@@ -421,4 +422,77 @@ todoInput.classList.remove("form-control");
 todoInput.removeAttribute("name");
 ~~~
 
+### Session Storage - Key and Value
 
+If I want to for a short time use my browser's memory, I have to use "sessionStorage"
+
+~~~js
+add.addEventListener("click",addItem);
+delete.addEventListener("click",deleteItem); // now we have marked a new function
+clear.addEventListener("click",clearItem);
+
+function addItem(e) {
+   // now ı add 2 parametres for key and values 
+   sessionStorage.setItem(addkey.value, addvalue.value);
+   //this function add key and value 
+}
+function deleteItem(e) {
+   sessionStorage.removeItem(deletekey.value);
+   // this function delete one key which key we want
+}
+
+function clearItem(e) {
+   sessionStorage.clear();
+   // This function delete all keys and values 
+}
+
+~~~
+
+### Local Storage
+
+Local storage use memory for a long time 
+
+~~~js
+// Save in local Storage.
+localStorage.setItem("move","burqee");
+localStorage.setItem("again", 50);
+/*
+here wi see 2 type values, one value is string, one value is intager how can browser nows which one is intager 
+or which one is string ? If we want to save some thing in the Storage, save all values is string here 
+*/
+// Delete in local Storage
+localStorage.clear();
+~~~
+
+## Syntax Rules
+
+### Adding a function 
+
+~~~js
+
+add.addEventListener("click",addItem);
+delete.addEventListener("click",deleteItem); // now we have marked a new function
+clear.addEventListener("click",clearItem);
+
+function addItem(e) {
+
+}
+function deleteItem(e) {
+
+}
+
+function clearItem(e) {
+
+}
+
+~~~
+
+## Notes
+Ride a Array and then use it like ArrayList only one function 
+~~~js
+const todos = {todo1,todo2,todo3};
+// This makes the function array list. (JSON.parse)
+// We can use it like an arraylist. 
+const value = JSON.parse(localStorage.getItem("todos"));
+conslo.log(value);
+~~~

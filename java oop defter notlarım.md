@@ -25,16 +25,6 @@ satırları çalıştırır.
 
 tarzında çalışırken **jvm** ilk 2 satırı yapar ve 3. satırımızı yanı **Execut** işlemini işlemcilere bırakır.
 
-
-```mermaid
-
-graph TD
-
-A[Java code ] -- Derleme*javac*  --> B((Byet code ))
-B -- a.class --> D{JVM for different OS}
-
-```
-
 C dilinde 
 
   define Adam 3
@@ -56,7 +46,7 @@ Java dilinde
 | nesne | Heap  |   
 
 
-Nesnenin yeri bellidir sabittir program başlar ve değişmez
+Nesnenin yeri bellidir sabittir, program başlar ve değişmez
 
 Program içerisinde hafızaya alınan nesneler kulanımı bittikten sonra yerlerini farklı class
 verirler
@@ -65,6 +55,7 @@ verirler
 > Refactoring: codun çalışması değiştirilmeden tekrardan inşa edilmesi
 
 Public static void main(string[] args)
+
     >Public JVM programı yorumlamaya başlarken main metodunu arar bu yüzden JVM in bulabilmesi için public veriyoruz.
     >static class tanımlamadan da çagırabilmemiz için 
     >void metodun değerini belirler 
@@ -374,7 +365,10 @@ public String getName(){
 
 > Has a ilişkisi **Aggegation** ile kullanılır **Composition** **Aggegation**'ın özel bir türüdür  
 
-#### Aggregation 
+## Aggregation 
+
+![](https://1drv.ms/u/s!Ana2J-Tb3y24gVneTxGTjjlBljKT?e=fSgN2N)
+
 1) Has a ilişkisi
 2) Nesnelerin yaşamları birbirlerine bağlı değildir 
 
@@ -406,7 +400,7 @@ public static main (String args[])
 
 > Yukarda gördüğümüz üzere (ndp = null) tarzında bir kod yazarak (ndp)  yi sıfırlıyoruz burada **Aggregation** mantığı ile bakacak olursak nesnemiz silinse bile ona bağlı özellikler veya başka nesneler metodlar her hangi bir verimiz başka bir nesneye de bağlı olabileceğinden nesnenin sıfırlanmasından etkilenmeyebilir.
 
-#### Composition
+## Composition
 1) "Has a" + "is part of " ilişkisi.
 
 2) Kapsayanın hayatı biterse kapsananın da hayatı sona erer.
@@ -449,7 +443,7 @@ int id = ogr.getkartId();
 ~~~
 
 > **Composition** bilgileri saklar ve dişardan ne bilgi alır ne de dışarıya bilgi verir böylelikle bir nesnenin referansı başka bir ver tarafından tutulamaz ve buradaki nesnemizi öldürdüğümüz zaman tüm metodlar veriler beraberinde ölürler.
-
+> **Aliasing** = bir nesneyi birden fazla pointer tutuyorsa buna *Aliasing* deniliyor
 # Syntax 
 
 
