@@ -337,6 +337,9 @@ Ogrenci ogr5 = ogr2.clone();
 > Has a ilişkisi **Aggegation** ile kullanılır **Composition** **Aggegation**'ın özel bir türüdür  
 
 ## Aggregation 
+
+![](https://1drv.ms/u/s!Ana2J-Tb3y24gVneTxGTjjlBljKT?e=fSgN2N)
+
 1) Has a ilişkisi
 2) Nesnelerin yaşamları birbirlerine bağlı değildir 
 
