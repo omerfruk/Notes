@@ -366,13 +366,14 @@ public String getName(){
 > Has a ilişkisi **Aggegation** ile kullanılır **Composition** **Aggegation**'ın özel bir türüdür  
 
 ## Aggregation 
-
-![](https://github.com/omerfruk/Notes/blob/master/images/aggregation.png?raw=true)
-
 1) Has a ilişkisi
 2) Nesnelerin yaşamları birbirlerine bağlı değildir 
 
+![](https://github.com/omerfruk/Notes/blob/master/images/aggregation.png?raw=true)
+
+> yukarda anlatılmak istenen gibi Her bir *Öğrencinin * bir *danışmanı *vardır gibi ne burdaki danışman giderse öğrencinin öğrenciliğinde bir değişim olur ne de öğrenci giderse danışmanın danışmanlığına birşey olur 
 ~~~java
+
 public class Ders {
 	private string dersAdı;
 	private hoca;
@@ -396,17 +397,18 @@ public static main (String args[])
 	ndp = null; // ndp yı yoketme 
 }
 }
-~~~
-
+~~~ 
 > Yukarda gördüğümüz üzere (ndp = null) tarzında bir kod yazarak (ndp)  yi sıfırlıyoruz burada **Aggregation** mantığı ile bakacak olursak nesnemiz silinse bile ona bağlı özellikler veya başka nesneler metodlar her hangi bir verimiz başka bir nesneye de bağlı olabileceğinden nesnenin sıfırlanmasından etkilenmeyebilir.
 
 ## Composition
 
-![](https://github.com/omerfruk/Notes/blob/master/images/composition.png?raw=true)
-
 1) "Has a" + "is part of " ilişkisi.
 
 2) Kapsayanın hayatı biterse kapsananın da hayatı sona erer.
+
+![](https://github.com/omerfruk/Notes/blob/master/images/composition.png?raw=true)
+
+> Buda da gördüğümüz üzere her bir *Öğrencinin* bir *Öğrenci kartı* vardır burda öğrenciye ortadan kaldırırsak otamatik olarak kartı da geçersiz olur böylelikle öğrencinin hayatıyla kartın hayatı birbirine bağlıdır 
 
 ~~~java
 public class Ogrenci{
@@ -445,8 +447,11 @@ int id = ogr.getkartId();
 }
 ~~~
 
-> **Composition** bilgileri saklar ve dişardan ne bilgi alır ne de dışarıya bilgi verir böylelikle bir nesnenin referansı başka bir ver tarafından tutulamaz ve buradaki nesnemizi öldürdüğümüz zaman tüm metodlar veriler beraberinde ölürler.
-> **Aliasing** = bir nesneyi birden fazla pointer tutuyorsa buna *Aliasing* deniliyor
+>**Composition** bilgileri saklar ve dişardan ne bilgi alır ne de dışarıya bilgi verir böylelikle bir nesnenin referansı başka bir ver tarafından tutulamaz ve buradaki nesnemizi öldürdüğümüz zaman tüm metodlar veriler beraberinde ölürler.
+>**Composition** **Aggregation**'ın özel bir halidir.
+>**Composition** da getter setter metodları kullanılmaz.Bunun sebebi *getter* *setter* metodları dışardan bağlantıya sebeb olur.Böylelikle bizler **Composition** yerine **Aggregation** yazmış oluruz
+>**Aliasing** = bir nesneyi birden fazla pointer tutuyorsa buna *Aliasing* deniliyor  
+
 # Syntax 
 
 
@@ -456,7 +461,9 @@ int id = ogr.getkartId();
 int a [] = {2,3,5,6,96};
 int b[] = a;
 ~~~
-> kopyalanacak olan dizi ile kopya olan dizi rem de aynı yeri gösterecek (pointer misali) burada biz **b[]** dizisinde bir veri değiştiridik mi otomatik olarak **a[]** dizisnde de değişiklik gözlenir  
+
+>kopyalanacak olan dizi ile kopya olan dizi rem de aynı yeri gösterecek (pointer misali) burada biz **b[]** dizisinde bir veri değiştiridik mi otomatik olarak **a[]** dizisnde de değişiklik gözlenir
+
 ### Deep copy (derin kopyalama)
 ~~~java
 int b[] = new int [a.length]; // burada a dizisinin uzunlugunu b dizisine atadık
