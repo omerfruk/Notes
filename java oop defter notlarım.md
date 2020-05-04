@@ -454,6 +454,15 @@ int id = ogr.getkartId();
 
 # Syntax 
 
+### foreach kullanımı
+~~~java
+for (int DiziElemani : DiziIsmi){
+System.out.println(DiziElemani)}
+~~~
+> Burada görüldüğü gibi foreach şeklinde bir anahtar kelimemiz yok burada asıl yapılan iş dizinin içine girip dizinin içindeki elemanları tek tek okumak ve verilen komutları ona göre yapmak 
+
+> Öncelikle burada bir for döngüsü açıyoruz sonrasında ":" dan sonra istediğimiz diziyi yazıyoruz sonrasında istediğimiz komutları yazıyoruz 
+-----------------------------------------------------------------------
 
 ## copy type 
 ### shallow copy (yüzeysel kopyalama )
