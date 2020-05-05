@@ -453,8 +453,25 @@ int id = ogr.getkartId();
 >**Aliasing** = bir nesneyi birden fazla pointer tutuyorsa buna *Aliasing* deniliyor  
 
 # Syntax 
+### Arayy
+~~~java
 
-### foreach kullanımı
+int [] a;              // Bu şekilde diziler tanımlarız
+int a[]={1,2,3,4,5,6}; //  Diziyi aşagıdaki şekilde çagırırız.
+
+a= new int [10]; // Diziyi oluşturma
+~~~
+2 boyutu diziler 
+~~~java
+String[][] name {
+*
+*
+*
+}
+
+~~~
+
+### Foreach kullanımı
 ~~~java
 for (int DiziElemani : DiziIsmi){
 System.out.println(DiziElemani)}
@@ -482,21 +499,4 @@ for (int i =0;i<a.length;i++) // burada ise teker teker verileri diğer diziye k
 {
 b[i]=a[i]
 }
-~~~
-### Arayy
-~~~java
-
-int [] a;              // Bu şekilde diziler tanımlarız
-int a[]={1,2,3,4,5,6}; //  Diziyi aşagıdaki şekilde çagırırız.
-
-a= new int [10]; // Diziyi oluşturma
-
-// 2 boyutlu diziler 
-
-String[][] name {
-*
-*
-*
-}
-
 ~~~
