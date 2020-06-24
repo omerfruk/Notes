@@ -42,3 +42,23 @@ try{
     print("finally blogu calisti");
 }
 ~~~
+
+~~~dart 
+// eger kendi exeption umuzu yazmak istersek 
+try{
+    paraYatir(-60);
+}catch(e){
+    print("hata" + e.hataGoster());
+}
+
+paraYatir(int miktar){
+    if(miktar<0){
+        throw new ParaYatirExeption();
+    }else print(hesabınıza $miktar TL yatirildi);
+}
+
+class ParaYatirExeption implements Exeption{
+    String hataGoster() =>"negatif sayi giremezsiniz"
+} 
+~~~
+>> öncelikle para yatırma metodumuzu yazıyoruz sonrasında ona uygun bir class ile hatamızın donuşunu belirtiyoruz belirtilen hata catch blogunda hata parametresiyle geri döndürülüyor
