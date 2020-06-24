@@ -28,6 +28,17 @@ try{
     int sonuc = 12~/0 ; 
     print("bolum = $sonuc");
 }catch(e , s){ 
-    //hatanın sebebi bilinmiyosa bunu bir parametreye atayalım
     print("hata cıktısı: $e b-ve stack trace:$s");
+}
+~~~
+~~~dart
+print("Finally blogu");
+try{
+    int sonuc = 12~/0 ; 
+    print("bolum = $sonuc");
+}catch(e , s){ 
+    print("hata cıktısı: $e b-ve stack trace:$s");
+}finally(){ 
+    print("finally blogu calisti");
+}
 ~~~
