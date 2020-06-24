@@ -366,13 +366,14 @@ public String getName(){
 > Has a ilişkisi **Aggegation** ile kullanılır **Composition** **Aggegation**'ın özel bir türüdür  
 
 ## Aggregation 
-
-![](https://1drv.ms/u/s!Ana2J-Tb3y24gVneTxGTjjlBljKT?e=fSgN2N)
-
 1) Has a ilişkisi
 2) Nesnelerin yaşamları birbirlerine bağlı değildir 
 
+![](https://github.com/omerfruk/Notes/blob/master/images/aggregation.png?raw=true)
+
+> yukarda anlatılmak istenen gibi Her bir *Öğrencinin * bir *danışmanı *vardır gibi ne burdaki danışman giderse öğrencinin öğrenciliğinde bir değişim olur ne de öğrenci giderse danışmanın danışmanlığına birşey olur 
 ~~~java
+
 public class Ders {
 	private string dersAdı;
 	private hoca;
@@ -396,14 +397,18 @@ public static main (String args[])
 	ndp = null; // ndp yı yoketme 
 }
 }
-~~~
-
+~~~ 
 > Yukarda gördüğümüz üzere (ndp = null) tarzında bir kod yazarak (ndp)  yi sıfırlıyoruz burada **Aggregation** mantığı ile bakacak olursak nesnemiz silinse bile ona bağlı özellikler veya başka nesneler metodlar her hangi bir verimiz başka bir nesneye de bağlı olabileceğinden nesnenin sıfırlanmasından etkilenmeyebilir.
 
 ## Composition
+
 1) "Has a" + "is part of " ilişkisi.
 
 2) Kapsayanın hayatı biterse kapsananın da hayatı sona erer.
+
+![](https://github.com/omerfruk/Notes/blob/master/images/composition.png?raw=true)
+
+> Buda da gördüğümüz üzere her bir *Öğrencinin* bir *Öğrenci kartı* vardır burda öğrenciye ortadan kaldırırsak otamatik olarak kartı da geçersiz olur böylelikle öğrencinin hayatıyla kartın hayatı birbirine bağlıdır 
 
 ~~~java
 public class Ogrenci{
@@ -442,10 +447,39 @@ int id = ogr.getkartId();
 }
 ~~~
 
-> **Composition** bilgileri saklar ve dişardan ne bilgi alır ne de dışarıya bilgi verir böylelikle bir nesnenin referansı başka bir ver tarafından tutulamaz ve buradaki nesnemizi öldürdüğümüz zaman tüm metodlar veriler beraberinde ölürler.
-> **Aliasing** = bir nesneyi birden fazla pointer tutuyorsa buna *Aliasing* deniliyor
-# Syntax 
+>**Composition** bilgileri saklar ve dişardan ne bilgi alır ne de dışarıya bilgi verir böylelikle bir nesnenin referansı başka bir ver tarafından tutulamaz ve buradaki nesnemizi öldürdüğümüz zaman tüm metodlar veriler beraberinde ölürler.
+>**Composition** **Aggregation**'ın özel bir halidir.
+>**Composition** da getter setter metodları kullanılmaz.Bunun sebebi *getter* *setter* metodları dışardan bağlantıya sebeb olur.Böylelikle bizler **Composition** yerine **Aggregation** yazmış oluruz
+>**Aliasing** = bir nesneyi birden fazla pointer tutuyorsa buna *Aliasing* deniliyor  
 
+# Syntax 
+### Arayy
+~~~java
+
+int [] a;              // Bu şekilde diziler tanımlarız
+int a[]={1,2,3,4,5,6}; //  Diziyi aşagıdaki şekilde çagırırız.
+
+a= new int [10]; // Diziyi oluşturma
+~~~
+2 boyutu diziler 
+~~~java
+String[][] name {
+*
+*
+*
+}
+
+~~~
+
+### Foreach kullanımı
+~~~java
+for (int DiziElemani : DiziIsmi){
+System.out.println(DiziElemani)}
+~~~
+> Burada görüldüğü gibi foreach şeklinde bir anahtar kelimemiz yok burada asıl yapılan iş dizinin içine girip dizinin içindeki elemanları tek tek okumak ve verilen komutları ona göre yapmak 
+
+> Öncelikle burada bir for döngüsü açıyoruz sonrasında ":" dan sonra istediğimiz diziyi yazıyoruz sonrasında istediğimiz komutları yazıyoruz 
+-----------------------------------------------------------------------
 
 ## copy type 
 ### shallow copy (yüzeysel kopyalama )
@@ -453,7 +487,9 @@ int id = ogr.getkartId();
 int a [] = {2,3,5,6,96};
 int b[] = a;
 ~~~
-> kopyalanacak olan dizi ile kopya olan dizi rem de aynı yeri gösterecek (pointer misali) burada biz **b[]** dizisinde bir veri değiştiridik mi otomatik olarak **a[]** dizisnde de değişiklik gözlenir  
+
+>kopyalanacak olan dizi ile kopya olan dizi rem de aynı yeri gösterecek (pointer misali) burada biz **b[]** dizisinde bir veri değiştiridik mi otomatik olarak **a[]** dizisnde de değişiklik gözlenir
+
 ### Deep copy (derin kopyalama)
 ~~~java
 int b[] = new int [a.length]; // burada a dizisinin uzunlugunu b dizisine atadık
@@ -463,21 +499,4 @@ for (int i =0;i<a.length;i++) // burada ise teker teker verileri diğer diziye k
 {
 b[i]=a[i]
 }
-~~~
-### Arayy
-~~~java
-
-int [] a;              // Bu şekilde diziler tanımlarız
-int a[]={1,2,3,4,5,6}; //  Diziyi aşagıdaki şekilde çagırırız.
-
-a= new int [10]; // Diziyi oluşturma
-
-// 2 boyutlu diziler 
-
-String[][] name {
-*
-*
-*
-}
-
 ~~~
