@@ -7,8 +7,19 @@ Istisna kavramı program çalışırken olası bir hatayı düzeltmek veya hatan
 print("olasi hatanın sebebini veya adı biliniyorsa ");
 try{        // turkcesi eger hata varsa bunları dene de diyebliriz
     int sonuc = 12~/0 ; 
-    print("bolum = &sonuc");    
+    print("bolum = $sonuc");    
 } on IntagerDivisionByZeroExeption {
     print("bolen 0 olamaz");
 } 
+~~~
+~~~dart 
+print("hatanın sebebi ve adı bilinmiyorsa");
+try{
+    int sonuc = 12~/0 ; 
+    print("bolum = $sonuc");
+}catch(e){ 
+    //hatanın sebebi bilinmiyosa bunu bir parametreye atayalım
+    //bu hatamızın parametresi exeption'ın e si olsun 
+    print("hata cıktısı $e");
+}
 ~~~
