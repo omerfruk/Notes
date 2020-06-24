@@ -19,7 +19,15 @@ try{
     print("bolum = $sonuc");
 }catch(e){ 
     //hatanın sebebi bilinmiyosa bunu bir parametreye atayalım
-    //bu hatamızın parametresi exeption'ın e si olsun 
     print("hata cıktısı $e");
 }
+~~~
+~~~dart
+print("hatanın sebebi ve adı bilinmiyorsa ve stackrac'i gormek istiyorsak");
+try{
+    int sonuc = 12~/0 ; 
+    print("bolum = $sonuc");
+}catch(e , s){ 
+    //hatanın sebebi bilinmiyosa bunu bir parametreye atayalım
+    print("hata cıktısı: $e b-ve stack trace:$s");
 ~~~
