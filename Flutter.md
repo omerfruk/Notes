@@ -61,4 +61,4 @@ class ParaYatirExeption implements Exeption{
     String hataGoster() =>"negatif sayi giremezsiniz"
 } 
 ~~~
->> öncelikle para yatırma metodumuzu yazıyoruz sonrasında ona uygun bir class ile hatamızın donuşunu belirtiyoruz belirtilen hata catch blogunda hata parametresiyle geri döndürülüyor
+>> öncelikle para yatırma metodumuzu yazıyoruz sonrasında ona uygun bir class ile hata parametresine gönderiliyor gönderilen hata catch blogunda hata parametresiyle geri döndürülüyor
