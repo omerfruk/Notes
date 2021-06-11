@@ -3,7 +3,7 @@
 ## Kaynaklar
 
 ### React js
-[React js](https://tr.reactjs.org/tutorial/tutorial.html)
+[Vue js](https://vuejs.org/v2/guide/class-and-style.html)
 ### JavaScript 
 [JavaScript](https://w3schools.com/js/default.asp)
 ### ssh key
