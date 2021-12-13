@@ -22,7 +22,7 @@ işlemimizde hata bulunmaz ise alt taraftaki gibi mesaj alırız.
 Switched to new branch “carpma_islemi”
 ~~~
 
-
+---
 #### 2. si direk olarak branch oluşturup geçiş yapmaktır 
 ~~~git
 git checkout -b “branch_ismi”
@@ -45,3 +45,15 @@ git checkout -d “silinecek_branch_ismi”
 > brench içerisinde iken branch i silemessiniz (Bindigimiz dalı kesemeyiz)
 > 
 > branch bir yere merge edilmemiş ise hata vericektir zorunlu silmek için **-D** parametresi verilebilir
+---
+## Git merge
+branch lar arasındaki değişiklikleri görmek için 
+~~~git
+git diff master branch2
+~~~
+master ile branch2 arasındaki fakları gösterir.
+
+### Merge etme 
+Önce dalı nereye merge etmek istiyorsak o dala **git checkout** ile geçiş yapmamız gerekiyor.
+
+geçildikten sonra **git merge "branch_ismi"** diyerek merge işlemimizi gerçekleştiriyoruz 
