@@ -41,6 +41,7 @@ Branch silmek için branch komutuna **-d** veya **--delete** parametrelerini ver
 ~~~git
 git checkout -d “silinecek_branch_ismi”
 ~~~
-##### **Note : ** 
-brench içerisinde iken branch i silemessinmzi (Bindigimiz dalı kesemeyiz)
-branch bir yere merge edilmemiş ise hata vericektir zorunlu silmek için **-D** parametresi verilebilir
+##### **Note :** 
+> brench içerisinde iken branch i silemessiniz (Bindigimiz dalı kesemeyiz)
+> 
+> branch bir yere merge edilmemiş ise hata vericektir zorunlu silmek için **-D** parametresi verilebilir
