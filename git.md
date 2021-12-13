@@ -1,6 +1,8 @@
 # Git Notları
 
-### Git branch 
+## Git branch 
+
+### Branch ekleme 
 
 İki yöntem vardır 
 
@@ -31,3 +33,14 @@ işlemimizde hata bulunmaz ise alt taraftaki gibi mesaj alırız.
 ~~~git
 Switched to new branch “carpma_islemi”
 ~~~
+
+### Branch silme 
+
+Branch silmek için branch komutuna **-d** veya **--delete** parametrelerini veriyoruz. 
+
+~~~git
+git checkout -d “silinecek_branch_ismi”
+~~~
+##### **Note : ** 
+brench içerisinde iken branch i silemessinmzi (Bindigimiz dalı kesemeyiz)
+branch bir yere merge edilmemiş ise hata vericektir zorunlu silmek için **-D** parametresi verilebilir
