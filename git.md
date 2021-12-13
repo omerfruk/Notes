@@ -4,7 +4,7 @@
 
 İki yöntem vardır 
 
-1. si branc oluşturup sonrasında geçiş yapmak 
+#### 1. si branc oluşturup sonrasında geçiş yapmak 
 ~~~git
 git branch “branch_ismi”
 ~~~
@@ -21,7 +21,7 @@ Switched to new branch “carpma_islemi”
 ~~~
 
 
-2. si direk olarak branch oluşturup geçiş yapmaktır 
+#### 2. si direk olarak branch oluşturup geçiş yapmaktır 
 ~~~git
 git checkout -b “branch_ismi”
 ~~~
