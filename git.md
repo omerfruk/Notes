@@ -1,5 +1,45 @@
 # Git Notları
 
+## git proje başlangıcı 
+
+`` 
+git init 
+``
+çalışılan dizide .git uzantılı bir dosya ile beraber working tree nizi oluşturur 
+
+git çalışma dizininizi(working tree) staging area ye eklenmesini saglar 
+
+``
+git add .
+``
+
+staging area daki verilerimizin local repomuza taşınmasını sağlar 
+
+``
+git commit -m "girilecek_mesaj"
+``
+commit -m seçenegi commit massage eklenecegini söylüyor 
+
+daha fazla commit parametresi icin [git commit parameters](https://git-scm.com/docs/git-commit)
+
+
+## .gitignore 
+
+girilen format dosyaların git working tree den staging area(index) e girmesini engeller 
+
+>logların bulundugu dizinin working tree den staging area ye girmesini engeller 
+``
+logs/
+``
+
+>styl uzantılı tüm dosyların working tree den staging area ye girmesini engeller 
+``
+*.styl
+``
+
+
+
+
 ## Git branch 
 
 ### Branch ekleme 
