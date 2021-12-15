@@ -45,6 +45,13 @@ bundan sonra komut satırına ```git clone git@github.com:omerfruk/Notes.git `` 
 
 ya ben uğraşamam böyle komut satırı ne imiş derseniz derseniz **(inşallah yazılımcı değilsinizdir)** aynı yerde download bölümünden projeyi zip olarak indirebilirsiniz   
 
+## Show 
+
+projeniz üzerinde çalışıyorsunuz ve geçmişte yapmış oldugunuz işlemler ve şu anki değişiklikler hakkında bilgi almak istiyorsunuz o zaman 
+
+dosyada yapılan değişiklikleri `` git status `` ile görebilirsiniz ( tüm değişiklikler önünüze serilecektir ) 
+
+
 ## .gitignore 
 
 girilen format dosyaların git working tree den staging area(index) e girmesini engeller 
