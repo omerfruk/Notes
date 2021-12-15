@@ -1,27 +1,49 @@
 # Git Notları
 
-## git proje başlangıcı 
+## Create 
 
+### Proje oluşturma 
+
+çalışılan dizide .git uzantılı bir dosya ile beraber working tree nizi oluşturan komut
 `` 
 git init 
 ``
-çalışılan dizide .git uzantılı bir dosya ile beraber working tree nizi oluşturur 
 
-git çalışma dizininizi(working tree) staging area ye eklenmesini saglar 
-
+git çalışma dizininizi(working tree) staging area ye eklenmesini sağlayan komut 
 ``
 git add .
 ``
 
-staging area daki verilerimizin local repomuza taşınmasını sağlar 
-
+staging area daki verilerimizin local repomuza taşınmasını sağlayan komut 
 ``
 git commit -m "girilecek_mesaj"
 ``
+
 commit -m seçenegi commit massage eklenecegini söylüyor 
 
 daha fazla commit parametresi icin [git commit parameters](https://git-scm.com/docs/git-commit)
 
+local repodaki verilerimizi remote repoya taşımak için 
+``
+git push 
+``
+
+### Var olan projeler 
+
+herhangi bi uzak sunucuda(platform) bulunan projelerimizi localimize indirip kendi bilgisayarımızda çalışmak isteyebiliriz böylelikle yapmamız gereken işlemler basit 
+
+#### HTTPS 
+
+Projeninin uzantısını(https içeren)  `` git clone https://github.com/omerfruk/Notes ``  şeklinde verildiği taktirde proje localinize inmiş olacaktır fakat repo gizli ise ve işlem gerçekleşmiyorsa bunun sebebi git config eksiğinden kaynaklanıyordur 
+
+[git config için dokümantasyon](https://git-scm.com/docs/git-config)
+
+#### SSH 
+
+git config ekledikten sonrasında oluşturulan ssh key'i uzak sunucunuza vermeniz gerekli (*ben git hub kullanıyorum ve github in ayarlar bölümünde ssh key bölümüne ekliyorum*)
+bundan sonra komut satırına ```git clone git@github.com:omerfruk/Notes.git `` komutunu yazarak local reponuza çekebilirsiniz 
+
+ya ben uğraşamam böyle komut satırı ne imiş derseniz derseniz **(inşallah yazılımcı değilsinizdir)** aynı yerde download bölümünden projeyi zip olarak indirebilirsiniz   
 
 ## .gitignore 
 
