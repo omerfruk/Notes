@@ -276,7 +276,7 @@ console.log(second); // [4, 5, 6]
 
 ~~~
 
-#### The join() array method
+#### The ``join()`` array method
 
 The join() method joins all the elements of the array using a separator and returns a string. The default separator used for joining is comma(,).
 
@@ -298,14 +298,109 @@ console.log(joined); // "🙂<=>😍<=>🙄<=>😟"
 
 ~~~
 
+#### The ``fill()`` array method
+The ``fill()`` method fills an array with a static value. You can change all the elements to a static value or change a few selected items. Note that the ``fill()`` method changes the original array.
 
+~~~js
 
+const colors = ['red', 'blue', 'green'];
 
+colors.fill('pink');
+console.log(colors); // ["pink", "pink", "pink"]
 
+~~~
 
+Here is an example where we are changing only the last two elements of the array using the fill() method:
 
+~~~js
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+const colors = ['red', 'blue', 'green'];
+colors.fill('pink', 1,3); // ["red", "pink", "pink"]
+
+~~~
+
+#### The ``includes()`` array method
+You can determine the presence on an element in an array using the ``includes()`` method. If the element is found, the method returns ``true``, and ``false`` otherwise.
+
+~~~js
+
+const names = ['tom', 'alex', 'bob', 'john'];
+
+names.includes('tom'); // returns true
+names.includes('july'); // returns false
+
+~~~
+
+#### The ``indexOf()`` array method
+You may want to know the index position of an element in array. You can use the ``indexOf()`` method to get that. It returns the index of the first occurrence of an element in the array. If an element is not found, the ``indexOf()`` method returns ``-1``.
+
+~~~js
+
+const names = ['tom', 'alex', 'bob', 'john'];
+
+names.indexOf('alex'); // returns 1
+names.indexOf('rob'); // returns -1
+
+~~~
+
+There is another method ``lastIndexOf()`` that helps you find the index of the last occurrence of an element in the array. Like ``indexOf()``, ``lastIndexOf()`` also returns ``-1`` if the element is not found.
+
+~~~js
+
+const names = ['tom', 'alex', 'bob', 'tom'];
+
+names.indexOf('tom'); // returns 0
+names.lastIndexOf('tom'); // returns 3
+
+~~~
+#### The ``reverse()`` array method
+As the name suggests, the ``reverse()`` method reverses the elements' positions in the array so that the last element goes into the first position and the first one to the last.
+~~~js
+
+const names = ['tom', 'alex', 'bob'];
+
+names.reverse(); // returns ["bob", "alex", "tom"]
+
+~~~
+> The reverse() method modifies the original array.
+
+#### The ``sort()`` array method
+The sort() method is probably one of the most often used array methods. The default sort() method converts the element types into strings and then sorts them. The default sorting order is ascending. The sort() method changes the original array.
+~~~js
+
+const names = ['tom', 'alex', 'bob'];
+
+names.sort(); // returns ["alex", "bob", "tom"]
+
+~~~
+#### The ``splice()`` array method
+To add an element using the ``splice()`` method, we need to pass the position where we want to add, how many elements to delete starting with the position, and the element to add.
+
+~~~js
+
+const names = ['tom', 'alex', 'bob'];
+
+names.splice(1, 0, 'zack');
+
+console.log(names); // ["tom", "zack", "alex", "bob"]
+
+~~~
+
+Have a look at the following example. Here we are removing one element from the index 2 (the 3rd element) and adding a new element, zack. The splice() method returns an array with the deleted element, bob.
+
+~~~js
+
+const names = ['tom', 'alex', 'bob'];
+
+const deleted = names.splice(2, 1, 'zack');
+
+console.log(deleted); // ["bob"]
+console.log(names); // ["tom", "alex", "zack"]
+
+~~~
+
+----
+
 ## Function 
 
 To create a **function** you give it a name and then write statemants needed the achieve its task inside the curly braces 
