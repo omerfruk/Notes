@@ -212,7 +212,100 @@ let fruits = ['🍈', '🍍', '🍌', '🍉', ['🍅', '🍄', '🥕']];
 
 In the example below, we have mapped the first two of the array elements to the tomato and mushroom variables. The remaining elements are mapped to the rest variable using the .... The rest variable is a new array containing the leftover elements.
 
+~~~js
 
+const [tomato, mushroom, ...rest] = ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑'];
+
+console.log(tomato); // '🍅'
+console.log(mushroom); // '🍄'
+console.log(rest); // ["🥦", "🥒", "🌽", "🥕", "🥑"]
+
+~~~
+
+#### How to Swap Values with Destructuring 
+We can swap the value of two variables easily using the array destructuring syntax.
+
+~~~js
+
+let first = '😔';
+let second = '🙂';
+[first, second] = [second, first];
+
+console.log(first);  // '🙂'
+console.log(second); // '😔'
+
+~~~
+
+#### **How to Merge Arrays**
+
+We can merge two arrays and create a new array with all the elements from both arrays. Let's take two arrays — one with a couple of smiley faces and another with a few veggies.
+
+~~~js
+
+const emotion = ['🙂', '😔'];
+const veggies = ['🥦', '🥒', '🌽', '🥕'];
+
+~~~
+Now, we will merge them to create a new array.
+
+~~~js
+
+const emotionalVeggies = [...emotion, ...veggies];
+console.log(emotionalVeggies); // ["🙂", "😔", "🥦", "🥒", "🌽", "🥕"]
+
+~~~
+
+
+### JavaScript Array Methods 
+
+#### The ``concat()`` array method
+
+The concat() method merges one or more arrays and returns a merged array. It is an immutable method. This means it doesn't change (mutate) existing arrays.
+
+
+~~~js
+
+const first = [1, 2, 3];
+const second = [4, 5, 6];
+
+const merged = first.concat(second);
+
+console.log(merged); // [1, 2, 3, 4, 5, 6]
+console.log(first); // [1, 2, 3]
+console.log(second); // [4, 5, 6]
+
+~~~
+
+#### The join() array method
+
+The join() method joins all the elements of the array using a separator and returns a string. The default separator used for joining is comma(,).
+
+~~~js
+
+const emotions = ['🙂', '😍', '🙄', '😟'];
+
+const joined = emotions.join();
+console.log(joined); // "🙂,😍,🙄,😟"
+
+~~~
+
+You can pass a separator of your choice to join the elements. Here is an example of joining the elements with a custom separator:
+
+~~~js
+
+const joined = emotions.join('<=>');
+console.log(joined); // "🙂<=>😍<=>🙄<=>😟"
+
+~~~
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Function 
 
 To create a **function** you give it a name and then write statemants needed the achieve its task inside the curly braces 
