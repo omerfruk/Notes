@@ -80,6 +80,139 @@ quantity = 3;
 
 **3 :** Variable Value
 
+### Array in js
+
+A pair of ``square brackets []`` represents an array in JavaScript. All the elements in the array are ``comma(,)`` separated.
+
+In JavaScript, arrays can be a collection of elements of any type. This means that you can create an array with elements of type String, Boolean, Number, Objects, and even other Arrays.
+
+Here is an example of an array with four elements: type Number, Boolean, String, and Object.
+
+~~~js
+
+const mixedTypedArray = [100, true, 'MardinLee', {}];
+
+~~~
+
+The position of an element in the array is known as its index. In JavaScript, the array index starts with 0, and it increases by one with each element.
+
+Interestingly, JavaScript arrays are not of fixed length. You can change the length anytime by assigning a positive numeric value.
+
+#### How to Create an Array in JavaScript
+You can create an array in multiple ways in JavaScript. The most straightforward way is by assigning an array value to a variable.
+
+~~~js
+
+const salad = 
+
+~~~
+
+You can also use the Array constructor to create an array.
+
+
+~~~js
+
+const salad = new Array 
+~~~
+
+#### How to Get Elements from an Array in JS
+You can access and retrieve elements from an array using its index.
+~~~js
+
+const element = array[index];
+
+~~~
+
+You can also loop through the array using a regular for or forEach loop, or any other loop.
+
+~~~js
+
+const salad = ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑'];
+
+for(let i=0; i<salad.length; i++) {
+  console.log(`Element at index ${i} is ${salad[i]}`);
+}
+
+~~~
+
+#### How to Add Elements to an Array in JS
+
+Use the push() method to insert an element into an array. The push() method adds an element at the end of the array.
+
+~~~js
+
+const salad =  ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑'];
+salad.push(  );
+
+~~~
+
+Note that the push() method adds an element to the end of the array. If you want to add an element to the beginning of the array, you'll need to use the unshift() method.
+
+~~~js
+
+const salad =  ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑'];
+salad.unshift(  );
+
+~~~
+#### How to Remove Elements from an Array in JS
+
+The easiest way to remove a single element from an array is using the ``pop()`` method. Every time you call the ``pop()`` method, it removes an element from the end of the array. 
+~~~js
+const salad = ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑'];
+salad.pop(); // 🥑
+
+console.log(salad); // ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕']
+
+~~~
+
+Use the ``shift()`` method to remove an element from the beginning of an array. Like the ``pop()`` method, ``shift()`` returns the removed element and changes the original array.
+
+~~~js
+
+const salad = ['🍅', '🍄', '🥦', '🥒', '🌽', '🥕', '🥑'];
+salad.shift(); // 🍅
+
+console.log(salad); // ['🍄', '🥦', '🥒', '🌽', '🥕', '🥑'];
+
+~~~
+
+#### How to Determine if a Value is an Array in JS
+
+You can determine if a value is an array using the ``Array.isArray(value)`` method. The method returns true if the passed value is an array.
+
+#### Array Destructuring in JavaScript 
+With ECMAScript 6 (ES6), we have some new syntax to extract multiple properties from an array and assign them to variables in one go. It is handy to help you keep your code clean and concise. This new syntax is called destructuring syntax.
+
+~~~js
+
+let [tomato, mushroom, carrot] = ['🍅', '🍄', '🥕'];
+
+~~~
+
+Now you can use the variables in your code:
+
+~~~js
+
+console.log(tomato, mushroom, carrot); // Output, 🍅 🍄 🥕
+
+~~~
+
+#### Nested Array Destructuring in JS
+
+In JavaScript, arrays can be nested. This means that an array can have another array as an element. Array nesting can go to any depth.
+
+
+~~~js
+
+let fruits = ['🍈', '🍍', '🍌', '🍉', ['🍅', '🍄', '🥕']];
+
+~~~
+
+#### How to Use the Rest Parameter in JS
+
+In the example below, we have mapped the first two of the array elements to the tomato and mushroom variables. The remaining elements are mapped to the rest variable using the .... The rest variable is a new array containing the leftover elements.
+
+
 ## Function 
 
 To create a **function** you give it a name and then write statemants needed the achieve its task inside the curly braces 
