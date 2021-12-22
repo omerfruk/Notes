@@ -51,6 +51,17 @@ projeniz üzerinde çalışıyorsunuz ve geçmişte yapmış oldugunuz işlemler
 
 dosyada yapılan değişiklikleri `` git status `` ile görebilirsiniz ( tüm değişiklikler önünüze serilecektir ) 
 
+### Dosya bazlı değişiklikleri görmek
+
+Stage'ye alınmayan yapılmış olan değişiklikleri göstermek için `` git diff `` komutunnu kullanabiliriz bu bizlere dosya bazlı(Tüm dosyaları gösterecektir)
+fakat bizler commit bazlı değişiklikleri de listelemek isteyebiliriz 
+
+> `` git diff commit1 commit2 `` yazarak 2 commit arasındaki değişiklikleri gözlemleyebiliriz 
+
+Takım arkadaşlarınız kendi değişikliklerini tamamlayıp remote branch'de yayınladıktan sonra siz de bu değişiklikleri inceleyip kendi local branch'inize entegre ederek çalışmanıza devam edebilirsiniz. Ancak remote branch'deki değişiklikleri entegre etmeden önce bu değişikliklere ilişkin bilgileri (dosyaları değil sadece değişikliklere dair Git'de tutulan bilgiler) görmeniz ve incelemeniz gerekir.
+
+`` git fetch origin `` komutu tam olarak üst tarafta yazmış oldugumuz yapmamızı sağlar remote repodaki veriyi localimize çekeriz ve değişikliklere göz atabiliriz böylelikle elimizde bulunan code herhangi bir değişikliğe ugramadan farkları görmemize olanak tanır (`` git pull `` ile arasındaki fark `` git pull `` kodları marge ederken `` git fetch  `` sizlere marge yapılmadan değişikliklere göz atmamıza olanak tanır )
+
 
 ## .gitignore 
 
@@ -65,8 +76,6 @@ logs/
 ``
 *.styl
 ``
-
-
 
 
 ## Git branch 
