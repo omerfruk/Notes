@@ -1,3 +1,6 @@
+# let's talk about javaScript 
+![](https://www.freecodecamp.org/news/content/images/2019/07/best-js-meme-to-date-2.png)
+
 # javascript ve jquery notları
 
 We will look at what the code on the right does
@@ -47,6 +50,9 @@ var greeting;
 ~~~
 
 if you want to add comments in your code, you must be use (/\*multi-line comments*/ or //single-line commants )
+
+# oK Ok let's stop the bullshit and talk about js
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--ij_hqKUb--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://github.com/damiancipolat/js_vs_memes/blob/master/doc/mind_js.jpg%3Fraw%3Dtrue)
 
 ## Variables
 
@@ -400,6 +406,9 @@ console.log(names); // ["tom", "alex", "zack"]
 ~~~
 
 ----
+
+# what's going on inside people's heads
+![](https://i.pinimg.com/564x/dc/cb/88/dccb882e84b9f011f313a1d0e3c2e9ed.jpg)
 
 ## Function 
 
