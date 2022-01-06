@@ -36,13 +36,18 @@ Dosyayı **hello.go** olarak  kaydedip terminale ``go run hello.go`` yazdığım
 
 çünkü ``go run`` komutunu çalıştırdığımızda binary çıktımız geçici bir dizinde oluşturulur ve program çalışmasını durdurduğu vakit bu geçici dizin silinir
 
+----
+
 #### go build Komutu 
 
 Eğer kodumuzun binary kısmını sonradan kullanamk istiyorsak yani kodumuzun çıktısını executable bir şekilde elde etmek istersek bunu terminale ``go build hello.go`` yazarak yapabiliriz. Hem elimizde kodun derlenmiş hali bulunurken hem de konsola *Merhaba, Dünya!* yazacağını göreceğiz.
 
 Bazı durumlarda Çıktımız farklı çıktılar ile vaya farklı dosya isimleri ile karışmamasını istersek komutumuza ``-o`` komutumuzu kullanarak yani  ``go build -o hello_world hello.go`` yazarak isimlendirmeyi farklı yapabiliriz.
 
-#### Third-Party kütüphane kullanımı 
+---
+
+### Third-Party kütüphane kullanımı
+
 Bazen başkalarının yazmış oldugu kütüphaneleri kodumuzda kullanmak isteriz.
 
 Go’nun kod yayınlama yöntemi diğer birçok dilden biraz farklıdır. Go yazılım geliştiricileri, JavaScript için NPM kayıt defteri gibi merkezi olarak barındırılan bir hizmete güvenmez. Bunun için, projelerin kaynak kodlarını kod repolarında paylaşırlar. ``Go install`` komutu, yüklemek istediğiniz projenin kaynak kodu repo konumu olan bir bağımsız değişken alır ve ardından **@** ve istediğiniz aracın sürümü (yalnızca en son sürümü almak istiyorsanız **@** en son sürümünü kullanın). Ardından aracı $GOPATH/bin dizininize indirir, derler ve yükler.
@@ -58,3 +63,18 @@ $ go install github.com/rakyll/hey@latest
 
 Hey kütüphanemizi ve onun içerisindeki tüm bagımlılıkları idnirir ve ``$GOPATH/bin`` uzantısına binary şekilde yükler.
 
+---
+
+
+## Types ve Tanımlamalrı
+
+### Booleans 
+
+bool tipi değişkenlerinin iki değeri olabilir: Doğru veya yanlış. bool için default değer yanlıştır:
+
+~~~go
+var flag bool // Değer atanmadığı için false değerini aldı
+var isAwesome = true
+~~~
+
+![](https://github.com/Notes/images/intager.png?raw=true)
