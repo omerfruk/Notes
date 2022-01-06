@@ -65,16 +65,37 @@ Hey kütüphanemizi ve onun içerisindeki tüm bagımlılıkları idnirir ve ``$
 
 ---
 
+## Types 
 
-## Types ve Tanımlamalrı
+### Arrays 
 
-### Booleans 
+> Go da diziler pek fazla kullanılmaz bunun sebebi ``[3]`` ve ``[4]`` boyutundaki dizileri farklı tipler olarak tanımlar ve yanı sıra dizinin uzunluğunu bir değişkende tutamazsınız çünkü çünkü tipler çalışma zamanında değil, derleme zamanında çözümlenmelidir.
 
-bool tipi değişkenlerinin iki değeri olabilir: Doğru veya yanlış. bool için default değer yanlıştır:
+> Ayrıca, farklı boyuttaki dizileri aynı türe dönüştürmek için *type conversion* uygulayamazsınız. Farklı boyutlarda dizileri birbirine dönüştüremeyeceğiniz için, herhangi bir boyuttaki dizilerle çalışan bir *Fonksiyon* yazamazsınız ve aynı değişkene farklı boyutlarda diziler atayamazsınız.
 
-~~~go
-var flag bool // Değer atanmadığı için false değerini aldı
-var isAwesome = true
+### Slices
+
+Çoğu zaman, bir değer dizisi tutan bir veri yapısı istediğinizde, kullanmanız gereken bir **slices** olur. **Slices**'i bu kadar kullanışlı kılan şey, uzunluğun bir **slices** için type belirteci olmamasıdır. Bu işlem, dizilerin sınırlamalarını kaldırır. Her boyuttaki **slices**'ı işleyen tek bir fonksiyon yazabiliriz ve gerektiğinde **slices**'ı büyütebiliriz.
+
+> Eğer ``[...]`` kullanımı uygulanırsa bu bir **dizi**, ``[]``  kullanımı uygulanırsa bu bir **slice** olur. 
+
+### Capacity
+
+Her *Slices*, ayrılan ardışık bellek konumu sayısı olan bir kapasiteye sahiptir. Bu, uzunluktan daha büyük olabilir. *Slices*'lara ekleme yapıldıgında *Slices*'in sonuna bir veya daha fazal değer eklenir. Eklenen her değer uzunluğu bir artırır. Uzunluk kapasiteye ulaştığında, değer koymak için daha fazla alan olmaz. Uzunluk kapasiteye eşit olduğunda ek değerler eklemeye çalışırsanız, Ekleme fonksiyonu, daha yüksek kapasiteli yeni bir dilim atamak için Go runtime'nı kullanır. **Orijinal slices'ta bulunan değerler yeni slices'a kopyalanır, yeni değerler sona eklenir ve yeni slices geri döndürülür.**
+
+> Slices'lar ne kadar da otomatik kapasite artmasına olanak tanısa da iyi tahmin edilmiş kapasiteli Slices oluşturmak performans açısından daha iyi olacaktır.
+
+### Make 
+
+Slices oluştururken dinamik olarak kapasitenin girilebileceğini söyledik 
+~~~go 
+x := make([]int,5)
 ~~~
+> oluşan slices in tüm elemanları default olarak 0 değerini alır.
 
-![](https://github.com/Notes/images/intager.png?raw=true)
+burada uzunlugu 5 olan ve kapasitesi 5 olan bir *slices* oluşturduk fakat en çok yapılan hatalardan biri 
+
+~~~go 
+x = append(x,10)
+~~~
+> append fonksiyonu her zaman *slices*'in uzunlugunu arttırır. Bu yüzden yeni oluşacak dizimiz **[0,0,0,0,0,10]** olur.
