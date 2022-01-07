@@ -99,3 +99,97 @@ burada uzunlugu 5 olan ve kapasitesi 5 olan bir *slices* oluşturduk fakat en ç
 x = append(x,10)
 ~~~
 > append fonksiyonu her zaman *slices*'in uzunlugunu arttırır. Bu yüzden yeni oluşacak dizimiz **[0,0,0,0,0,10]** olur.
+
+Kapasiteyi dinamik olarak vermek istersek
+~~~go
+x := make([]int, 5, 10)
+~~~
+
+Kodumuz 5 uzunlugunda 10 kapasiteli bir **Slices** oluşturur.
+
+~~~go
+ x := make([]int, 0, 10) 
+ x = append(x, 5,6,7,8)
+~~~
+
+x in değeri şimdi **[5,6,7,8]** şeklinde **4** uzunlukta **10** kapasitede hali hazırda bulunan **slices**'ımız.
+
+### Slice oluşturma
+
+ Birincil hedef, **slice** büyümesi gereken sayıyı en aza indirmektir. Eğer dilimin hiç büyümesine gerek kalmayacaksa (çünkü fonksiyonunuz hiçbir şey dönmeyebilir)
+
+ ~~~go
+ var data []int
+ ~~~
+
+Başlangıç değerlerinden bazılarınız varsa veya bir **slice** değerleri değişmiyorsa
+
+~~~go
+data := []int{2,4,6,8}
+~~~
+
+Dilimin ne kadar büyük olması gerektiği konusunda iyi bir fikriniz varsa ancak programı yazarken bu değerlerin ne olacağını bilemezseniz, make  seçeneğini kullanın.ardından 0 uzunlukta, kapasitesi 0 olmayan **slice** oluşturmanın önerilen 3 yolu vardır: 
+
+1 ->  Dilimi arabellek olarak kullanıyorsanız, sıfır olmayan bir uzunluk belirleyin.
+
+2 ->  Tam olarak istediğiniz boyutu bildiğinizden eminseniz, değerleri ayarlamak için ***slice*** uzunluğunu ve indexini belirleyebilirsiniz. 
+
+3 -> Diğer durumlarda sıfır uzunlukta ve belirli bir kapasitede make seçeneğini kullanın. Bu, **slice** öğe eklemek için ***append***'i kullanmanızı sağlar. Öğe sayısı daha küçük gibi çıkarsa, sonunda dışarıdan sıfır değeri olmaz. Öğe sayısı daha büyükse, kodunuz panik olmaz.
+
+---
+
+### Slice parçası (Slicing Slices)
+
+> Bir **slice**'tan kesit aldığınızda, verilerin bir kopyasını almıyorsunuz. Bunun yerine, artık belleği paylaşan iki değişkeniniz oluyor. Bu, bir **slice**'taki bir öğede yapılan değişikliklerin o öğeyi paylaşan tüm **slice**'larda da etki oluşturacagı anlamına gelir. 
+
+> Karmaşık **slice** yapılarından kaçınmak için ya alt **slice** lara ekleme yapmayın yada ana **slice**'a etki etmediğinden emin olun.
+
+---
+
+### Diziden slice elde etme 
+
+> Bir diziniz varsa, bir slice ifadesi kullanarak bu diziden bir **slice** alabilirsiniz. Bu, bir diziyi yalnızca **slice** alan bir *fonksiyona* köprüleme için kullanışlı bir yoldur. Ancak, bir diziden **slice** almanın, bir **slice**'tan **slice** alma ile aynı bellek paylaşımı özelliklerine sahip olduğunu unutmayın.
+
+~~~go
+x := [4]int{5, 6, 7, 8} 
+
+y := x[:2]
+z := x[2:]
+
+x[0] = 10 
+
+fmt.Println("x:", x)
+fmt.Println("y:", y)
+fmt.Println("z:", z)
+~~~
+
+Çıktı olarak 
+
+    x: [10 6 7 8]
+    y: [10 6]
+    z: [7 8]
+---
+
+### Copy
+
+Eğer bir **slice**'ın aynısı fakat daha özgürü(adres paylaşımı olmadan) lazım ise ``copy()`` methodunu kullanabiliriz 
+~~~go 
+x := []int{1, 2, 3, 4} 
+y := make([]int, 4) 
+num := copy(y, x) 
+fmt.Println(y, num)
+~~~
+
+Çıktı olarak 
+    
+    [1 2 3 4] 4
+
+Aynı zamanda tüm diziyi kopyalamamıza gerek yoktur 
+
+~~~go 
+x := []int{1, 2, 3, 4} 
+y := make([]int, 2) 
+copy(y, x[2:])
+~~~
+
+---
