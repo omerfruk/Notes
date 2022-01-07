@@ -193,3 +193,16 @@ copy(y, x[2:])
 ~~~
 
 ---
+
+## Strings, Runes ve Bytes
+> bir diziden veya slice tan bir değer çıkartabileceğiniz gibi, bir index ifadesi kullanarak bir stering tek bir değer çıkartabilirsiniz:
+
+~~~go 
+var s string = "Hello there" 
+var b byte = s[6]
+// veya stringten slice elde etme 
+var s2 string = s[4:7]
+var s3 string = s[:5]
+var s4 string = s[6:]
+~~~
+
