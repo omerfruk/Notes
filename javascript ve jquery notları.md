@@ -515,6 +515,9 @@ We can manipulate our elements with javascript on this document
 
 ## Veri Seçimleri 
 
+### What is the difference between ``let`` and ``var``
+
+
 ### Element ID'e Göre Seçme
 ~~~js
 
