@@ -1,5 +1,24 @@
 # Git Notları
 
+## Git Config 
+git ile localde işlem yapmadan önce gitconfig ayarlamalarımız yapmamız lazım 
+
+~~~
+$ git config --global user.name "your_userName"
+$ git config --global user.email "your_email@example.com"
+~~~
+
+sonrasında private repolara erişim için ssh key oluşturup bunu github'ımıza vermemiz gerekmektedir 
+
+sshKey oluşturma 
+
+~~~
+$ ssh-keygen -t ed25519 -C "your_email@example.com"
+~~~
+
+oluşan id_rsa.pub adlı dosyayi açıyoruz ve içindekini github ssh key bölümüne açıklamamız ile kopyalıyoruz böylelikle işimiz bitmiş oluyor 
+
+
 ## Create 
 
 ### Proje oluşturma 
